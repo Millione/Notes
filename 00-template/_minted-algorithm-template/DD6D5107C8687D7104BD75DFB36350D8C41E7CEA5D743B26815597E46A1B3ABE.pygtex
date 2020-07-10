@@ -1,0 +1,34 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// 大数加法}
+\PYG{k+kd}{public} \PYG{n}{String} \PYG{n+nf}{add}\PYG{o}{(}\PYG{n}{String} \PYG{n}{str1}\PYG{o}{,} \PYG{n}{String} \PYG{n}{str2}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{k+kt}{char}\PYG{o}{[]} \PYG{n}{s1} \PYG{o}{=} \PYG{n}{str1}\PYG{o}{.}\PYG{n+na}{toCharArray}\PYG{o}{();}
+    \PYG{k+kt}{char}\PYG{o}{[]} \PYG{n}{s2} \PYG{o}{=} \PYG{n}{str2}\PYG{o}{.}\PYG{n+na}{toCharArray}\PYG{o}{();}
+    \PYG{k+kt}{int} \PYG{n}{n1} \PYG{o}{=} \PYG{n}{s1}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{,} \PYG{n}{n2} \PYG{o}{=} \PYG{n}{s2}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{;}
+    \PYG{k+kt}{int} \PYG{n}{maxL} \PYG{o}{=} \PYG{n}{Math}\PYG{o}{.}\PYG{n+na}{max}\PYG{o}{(}\PYG{n}{n1}\PYG{o}{,} \PYG{n}{n2}\PYG{o}{);}
+    \PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{a} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{int}\PYG{o}{[}\PYG{n}{maxL} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{];}
+    \PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{b} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{int}\PYG{o}{[}\PYG{n}{maxL} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{];}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n1}\PYG{o}{;} \PYG{n}{i}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+        \PYG{n}{a}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{=} \PYG{n}{s1}\PYG{o}{[}\PYG{n}{n1} \PYG{o}{\PYGZhy{}} \PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{]} \PYG{o}{\PYGZhy{}} \PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n2}\PYG{o}{;} \PYG{n}{i}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+        \PYG{n}{b}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{=} \PYG{n}{s2}\PYG{o}{[}\PYG{n}{n2} \PYG{o}{\PYGZhy{}} \PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{]} \PYG{o}{\PYGZhy{}} \PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{maxL}\PYG{o}{;} \PYG{n}{i}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{if} \PYG{o}{(}\PYG{n}{a}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{+} \PYG{n}{b}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{10}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{k+kt}{int} \PYG{n}{tmp} \PYG{o}{=} \PYG{n}{a}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{+} \PYG{n}{b}\PYG{o}{[}\PYG{n}{i}\PYG{o}{];}
+            \PYG{n}{a}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{=} \PYG{n}{tmp} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{10}\PYG{o}{;}
+            \PYG{n}{a}\PYG{o}{[}\PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{]} \PYG{o}{+=} \PYG{n}{tmp} \PYG{o}{/} \PYG{l+m+mi}{10}\PYG{o}{;}
+        \PYG{o}{\PYGZcb{}} \PYG{k}{else} \PYG{o}{\PYGZob{}}
+            \PYG{n}{a}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{+=} \PYG{n}{b}\PYG{o}{[}\PYG{n}{i}\PYG{o}{];}
+        \PYG{o}{\PYGZcb{}}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{n}{StringBuilder} \PYG{n}{sb} \PYG{o}{=} \PYG{k}{new} \PYG{n}{StringBuilder}\PYG{o}{();}
+    \PYG{k}{if} \PYG{o}{(}\PYG{n}{a}\PYG{o}{[}\PYG{n}{maxL}\PYG{o}{]} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{append}\PYG{o}{((}\PYG{k+kt}{char}\PYG{o}{)(}\PYG{n}{a}\PYG{o}{[}\PYG{n}{maxL}\PYG{o}{]} \PYG{o}{+} \PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}}\PYG{o}{));}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{n}{maxL} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i}\PYG{o}{\PYGZhy{}\PYGZhy{})} \PYG{o}{\PYGZob{}}
+        \PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{append}\PYG{o}{((}\PYG{k+kt}{char}\PYG{o}{)(}\PYG{n}{a}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{+} \PYG{l+s+sc}{\PYGZsq{}0\PYGZsq{}}\PYG{o}{));}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{toString}\PYG{o}{();}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

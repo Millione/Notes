@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// 按键排序}
+\PYG{n}{Map}\PYG{o}{\PYGZlt{}}\PYG{n}{Character}\PYG{o}{,} \PYG{n}{Integer}\PYG{o}{\PYGZgt{}} \PYG{n}{map} \PYG{o}{=} \PYG{k}{new} \PYG{n}{TreeMap}\PYG{o}{\PYGZlt{}\PYGZgt{}(}\PYG{k}{new} \PYG{n}{Comparator}\PYG{o}{\PYGZlt{}}\PYG{n}{Character}\PYG{o}{\PYGZgt{}()} \PYG{o}{\PYGZob{}}
+    \PYG{k+kd}{public} \PYG{k+kt}{int} \PYG{n+nf}{compare}\PYG{o}{(}\PYG{n}{Character} \PYG{n}{o1}\PYG{o}{,} \PYG{n}{Character} \PYG{n}{o2}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{o2} \PYG{o}{\PYGZhy{}} \PYG{n}{o1}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+\PYG{o}{\PYGZcb{});}
+
+\PYG{c+c1}{// 按值排序}
+\PYG{n}{Map}\PYG{o}{\PYGZlt{}}\PYG{n}{Character}\PYG{o}{,} \PYG{n}{Integer}\PYG{o}{\PYGZgt{}} \PYG{n}{map} \PYG{o}{=} \PYG{k}{new} \PYG{n}{HashMap}\PYG{o}{\PYGZlt{}\PYGZgt{}();}
+\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Map}\PYG{o}{.}\PYG{n+na}{Entry}\PYG{o}{\PYGZlt{}}\PYG{n}{Character}\PYG{o}{,} \PYG{n}{Integer}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{list} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}\PYGZgt{}(}\PYG{n}{map}\PYG{o}{.}\PYG{n+na}{entrySet}\PYG{o}{());}
+\PYG{n}{Collections}\PYG{o}{.}\PYG{n+na}{sort}\PYG{o}{(}\PYG{n}{list}\PYG{o}{,} \PYG{k}{new} \PYG{n}{Comparator}\PYG{o}{\PYGZlt{}}\PYG{n}{Map}\PYG{o}{.}\PYG{n+na}{Entry}\PYG{o}{\PYGZlt{}}\PYG{n}{Character}\PYG{o}{,} \PYG{n}{Integer}\PYG{o}{\PYGZgt{}\PYGZgt{}()} \PYG{o}{\PYGZob{}}
+   \PYG{k+kd}{public} \PYG{k+kt}{int} \PYG{n+nf}{compare}\PYG{o}{(}\PYG{n}{Map}\PYG{o}{.}\PYG{n+na}{Entry}\PYG{o}{\PYGZlt{}}\PYG{n}{Character}\PYG{o}{,} \PYG{n}{Integer}\PYG{o}{\PYGZgt{}} \PYG{n}{o1}\PYG{o}{,} \PYG{n}{Map}\PYG{o}{.}\PYG{n+na}{Entry}\PYG{o}{\PYGZlt{}}\PYG{n}{Character}\PYG{o}{,} \PYG{n}{Integer}\PYG{o}{\PYGZgt{}} \PYG{n}{o2}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+       \PYG{k}{return} \PYG{n}{o2}\PYG{o}{.}\PYG{n+na}{getValue}\PYG{o}{()} \PYG{o}{\PYGZhy{}} \PYG{n}{o1}\PYG{o}{.}\PYG{n+na}{getValue}\PYG{o}{();}
+   \PYG{o}{\PYGZcb{}} 
+\PYG{o}{\PYGZcb{});}
+
+\PYG{c+c1}{// 遍历}
+\PYG{k}{for} \PYG{o}{(}\PYG{n}{Map}\PYG{o}{.}\PYG{n+na}{Entry}\PYG{o}{\PYGZlt{}}\PYG{n}{K}\PYG{o}{,} \PYG{n}{V}\PYG{o}{\PYGZgt{}} \PYG{n}{entry}\PYG{o}{:} \PYG{n}{coursesMap}\PYG{o}{.}\PYG{n+na}{entrySet}\PYG{o}{())} \PYG{o}{\PYGZob{}}  
+    \PYG{n}{System}\PYG{o}{.}\PYG{n+na}{out}\PYG{o}{.}\PYG{n+na}{println}\PYG{o}{(}\PYG{n}{entry}\PYG{o}{.}\PYG{n+na}{getKey}\PYG{o}{());}  
+    \PYG{n}{System}\PYG{o}{.}\PYG{n+na}{out}\PYG{o}{.}\PYG{n+na}{println}\PYG{o}{(}\PYG{n}{entry}\PYG{o}{.}\PYG{n+na}{getValue}\PYG{o}{());}  
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

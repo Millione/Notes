@@ -360,6 +360,391 @@ private void reverse(TreeNode from, TreeNode to) {
 
 ## 题目
 
+### 105. construct-binary-tree-from-preorder-and-inorder-traversal
+
+------
+
+**Description:**
+
+Given preorder and inorder traversal of a tree, construct the binary tree.
+
+**Note:**
+You may assume that duplicates do not exist in the tree.
+
+For example, given
+
+```
+preorder = [3,9,20,15,7]
+inorder = [9,3,15,20,7]
+```
+
+Return the following binary tree:
+
+```
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+
+[Discussion](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [Solution](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/solution/)
+
+**Code:**
+
+```java
+import java.util.Arrays;
+
+/*
+ * @lc app=leetcode id=105 lang=java
+ *
+ * [105] Construct Binary Tree from Preorder and Inorder Traversal
+ */
+
+// @lc code=start
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+class Solution {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        return helper(0, 0, inorder.length - 1, preorder, inorder);
+    }
+    
+    public TreeNode helper(int preStart, int inStart, int inEnd, int[] preorder, int[] inorder) {
+        if (preStart > preorder.length - 1 || inStart > inEnd) {
+            return null;
+        }
+        TreeNode root = new TreeNode(preorder[preStart]);
+        int inIndex = 0; // Index of current root in inorder
+        for (int i = inStart; i <= inEnd; i++) {
+            if (inorder[i] == root.val) {
+                inIndex = i;
+            }
+        }
+        root.left = helper(preStart + 1, inStart, inIndex - 1, preorder, inorder);
+        root.right = helper(preStart + inIndex - inStart + 1, inIndex + 1, inEnd, preorder, inorder);
+        return root;
+    }
+}
+// @lc code=end
+```
+
+### 106. construct-binary-tree-from-inorder-and-postorder-traversal
+
+------
+
+**Description:**
+
+Given inorder and postorder traversal of a tree, construct the binary tree.
+
+**Note:**
+You may assume that duplicates do not exist in the tree.
+
+For example, given
+
+```
+inorder = [9,3,15,20,7]
+postorder = [9,15,7,20,3]
+```
+
+Return the following binary tree:
+
+```
+    3
+   / \
+  9  20
+    /  \
+   15   7
+```
+
+[Discussion](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/discuss/?currentPage=1&orderBy=most_votes&query=) | [Solution](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/solution/)
+
+**Code:**
+
+```java
+/*
+ * @lc app=leetcode id=106 lang=java
+ *
+ * [106] Construct Binary Tree from Inorder and Postorder Traversal
+ */
+
+// @lc code=start
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
+        return build(postorder.length - 1, 0, inorder.length - 1, inorder, postorder);
+    }
+    private TreeNode build(int postEnd, int inStart, int inEnd, int[] inorder, int[] postorder) {
+        if (postEnd < 0 || inStart > inEnd) {
+            return null;
+        }
+        TreeNode node = new TreeNode(postorder[postEnd]);
+        int index = 0;
+        for (int i = inStart; i <= inEnd; i++) {
+            if (inorder[i] == node.val) {
+                index = i;
+            }
+        }
+        node.left = build(postEnd - 1 - inEnd + index, inStart, index - 1, inorder, postorder);
+        node.right = build(postEnd - 1, index + 1, inEnd, inorder, postorder);
+        return node;
+    }
+}
+// @lc code=end
+```
+
+### 117. populating-next-right-pointers-in-each-node-ii
+
+------
+
+**Description:**
+
+Given a binary tree
+
+```
+struct Node {
+  int val;
+  Node *left;
+  Node *right;
+  Node *next;
+}
+```
+
+Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to `NULL`.
+
+Initially, all next pointers are set to `NULL`.
+
+**Follow up:**
+
+- You may only use constant extra space.
+- Recursive approach is fine, you may assume implicit stack space does not count as extra space for this problem.
+
+**Example 1:**
+
+![img](https://assets.leetcode.com/uploads/2019/02/15/117_sample.png)
+
+```
+Input: root = [1,2,3,4,5,null,7]
+Output: [1,#,2,3,#,4,5,7,#]
+Explanation: Given the above binary tree (Figure A), your function should populate each next pointer to point to its next right node, just like in Figure B. The serialized output is in level order as connected by the next pointers, with '#' signifying the end of each level.
+```
+
+**Constraints:**
+
+- The number of nodes in the given tree is less than `6000`.
+- `-100 <= node.val <= 100`
+
+[Discussion](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/discuss/?currentPage=1&orderBy=most_votes&query=) | [Solution](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/solution/)
+
+**Code:**
+
+```java
+/*
+ * @lc app=leetcode id=117 lang=java
+ *
+ * [117] Populating Next Right Pointers in Each Node II
+ */
+
+// @lc code=start
+/*
+// Definition for a Node.
+class Node {
+    public int val;
+    public Node left;
+    public Node right;
+    public Node next;
+
+    public Node() {}
+    
+    public Node(int _val) {
+        val = _val;
+    }
+
+    public Node(int _val, Node _left, Node _right, Node _next) {
+        val = _val;
+        left = _left;
+        right = _right;
+        next = _next;
+    }
+};
+*/
+
+class Solution {
+    public Node connect(Node root) {
+        Node head = null, pre = null, cur = root;
+        while (cur != null) {
+            while (cur != null) {
+                if (cur.left != null) {
+                    if (pre != null) {
+                        pre.next = cur.left;
+                    } else {
+                        head = cur.left;
+                    }
+                    pre = cur.left;
+                }
+                if (cur.right != null) {
+                    if (pre != null) {
+                        pre.next = cur.right;
+                    } else {
+                        head = cur.right;
+                    }
+                    pre = cur.right;
+                }
+                cur = cur.next;
+            }
+            cur = head;
+            head = null;
+            pre = null;
+        }
+        return root;
+    }
+}
+// @lc code=end
+```
+
+### 99. recover-binary-search-tree
+
+------
+
+**Description:**
+
+Two elements of a binary search tree (BST) are swapped by mistake.
+
+Recover the tree without changing its structure.
+
+**Example 1:**
+
+```
+Input: [1,3,null,null,2]
+
+   1
+  /
+ 3
+  \
+   2
+
+Output: [3,1,null,null,2]
+
+   3
+  /
+ 1
+  \
+   2
+```
+
+**Example 2:**
+
+```
+Input: [3,1,4,null,null,2]
+
+  3
+ / \
+1   4
+   /
+  2
+
+Output: [2,1,4,null,null,3]
+
+  2
+ / \
+1   4
+   /
+  3
+```
+
+**Follow up:**
+
+- A solution using O(*n*) space is pretty straight forward.
+- Could you devise a constant space solution?
+
+**Code:**
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public void recoverTree(TreeNode root) {
+        TreeNode first = null, second = null, p = null;
+        TreeNode cur = root, pre = null;
+        for (; cur != null;) {
+            if (cur.left != null) {
+                pre = cur.left;
+                while (pre.right != null && pre.right != cur) {
+                    pre = pre.right;
+                }
+                if (pre.right == null) {
+                    pre.right = cur;
+                    cur = cur.left;
+                } else {
+                    if (p != null && p.val > cur.val) {
+				        if (first == null) {
+                            first = p;
+                            second = cur;
+                        }
+				        else {
+                            second = cur;
+                        }
+				    }
+				    p = cur;
+                    
+                    pre.right = null;
+                    cur = cur.right;
+                }
+            } else {
+                if (p != null && p.val > cur.val) {
+                    if (first == null) {
+                        first = p;
+                        second = cur;
+                    }
+                    else {
+                        second = cur;
+                    }
+                }
+                p = cur;
+                
+                cur = cur.right;
+            }
+        }
+        int tmp = first.val;
+        first.val = second.val;
+        second.val = tmp;
+    }
+}
+```
+
 ## 参考
 
 [Morris](https://spground.github.io/2018/01/27/Morris%20binary-tree%20traverse/)

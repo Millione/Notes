@@ -227,7 +227,7 @@ class Solution {
             res[cnt] = cur;
             for (int next : g[cur]) {
                 if (--deg[next] == 0) {
-                    queue.add(next);
+                    queue.offer(next);
                 }
             }
         }

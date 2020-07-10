@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// BigDecimal 类似}
+\PYG{c+c1}{// 构造对象最好使用 String，其它类型可转换为 String 进行构造，保证精度}
+\PYG{n}{BigInteger} \PYG{n}{a} \PYG{o}{=} \PYG{k}{new} \PYG{n}{BigInteger}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}123\PYGZdq{}}\PYG{o}{);}
+\PYG{n}{BigInteger} \PYG{n}{b} \PYG{o}{=} \PYG{n}{BigInteger}\PYG{o}{.}\PYG{n+na}{vauleOf}\PYG{o}{(}\PYG{l+m+mi}{123}\PYG{o}{);}
+\PYG{n}{BigInteger} \PYG{n}{c} \PYG{o}{=} \PYG{k}{new} \PYG{n}{BigInteger}\PYG{o}{(}\PYG{n}{String}\PYG{o}{.}\PYG{n+na}{valueOf}\PYG{o}{(}\PYG{l+m+mi}{0}\PYG{o}{));}
+
+\PYG{c+c1}{// 四则运算}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{add}\PYG{o}{(}\PYG{n}{b}\PYG{o}{);}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{subtract}\PYG{o}{(}\PYG{n}{b}\PYG{o}{);}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{divide}\PYG{o}{(}\PYG{n}{b}\PYG{o}{);}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{multiply}\PYG{o}{(}\PYG{n}{b}\PYG{o}{);}
+
+\PYG{c+c1}{// 比较大小}
+\PYG{n}{a}\PYG{o}{.}\PYG{n+na}{compareTo}\PYG{o}{(}\PYG{n}{b}\PYG{o}{);}
+\PYG{n}{a}\PYG{o}{.}\PYG{n+na}{equals}\PYG{o}{(}\PYG{n}{b}\PYG{o}{);}
+
+\PYG{c+c1}{// 常用方法}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{mod}\PYG{o}{(}\PYG{n}{b}\PYG{o}{);}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{gcd}\PYG{o}{(}\PYG{n}{b}\PYG{o}{);}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{max}\PYG{o}{(}\PYG{n}{b}\PYG{o}{);}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{min}\PYG{o}{(}\PYG{n}{b}\PYG{o}{);}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{abs}\PYG{o}{();}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{negate}\PYG{o}{();}
+\PYG{n}{c} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{pow}\PYG{o}{(}\PYG{n}{b}\PYG{o}{);}
+
+\PYG{c+c1}{// 转换}
+\PYG{k+kt}{int} \PYG{n}{d} \PYG{o}{=} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{intValue}\PYG{o}{();}
+\end{Verbatim}

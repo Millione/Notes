@@ -22,7 +22,7 @@
 ```java
 class Trie {
     
-    static final int MAx = 26;
+    static final int MAX = 26;
     
     private class TrieNode {
         int path;
@@ -86,7 +86,7 @@ class Trie {
         TrieNode cur = root;
         int index = 0;
         for (int i = 0; i < prefix.length(); i++) {
-            index = word.charAt(i) - 'a';
+            index = prefix.charAt(i) - 'a';
             if (cur.next[index] == null) {
                 return 0;
             }

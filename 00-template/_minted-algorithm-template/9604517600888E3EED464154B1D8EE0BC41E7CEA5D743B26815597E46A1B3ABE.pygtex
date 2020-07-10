@@ -1,0 +1,35 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{private} \PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{res}\PYG{o}{;}
+\PYG{k+kd}{private} \PYG{k+kt}{boolean}\PYG{o}{[]} \PYG{n}{visited}\PYG{o}{;}
+
+\PYG{k+kd}{public} \PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n+nf}{permuteUnique}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{nums}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{n}{res} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}\PYGZgt{}();}
+    \PYG{n}{visited} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{boolean}\PYG{o}{[}\PYG{n}{nums}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{];}
+    \PYG{n}{Arrays}\PYG{o}{.}\PYG{n+na}{sort}\PYG{o}{(}\PYG{n}{nums}\PYG{o}{);}
+    \PYG{n}{backtracking}\PYG{o}{(}\PYG{n}{nums}\PYG{o}{,} \PYG{k}{new} \PYG{n}{ArrayDeque}\PYG{o}{\PYGZlt{}\PYGZgt{}());}
+    \PYG{k}{return} \PYG{n}{res}\PYG{o}{;}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{k+kd}{private} \PYG{k+kt}{void} \PYG{n+nf}{backtracking}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{nums}\PYG{o}{,} \PYG{n}{Deque}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}} \PYG{n}{stack}\PYG{o}{)\PYGZob{}}
+    \PYG{c+c1}{// 满足条件}
+    \PYG{k}{if}\PYG{o}{(}\PYG{n}{stack}\PYG{o}{.}\PYG{n+na}{size}\PYG{o}{()} \PYG{o}{==} \PYG{n}{nums}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{)\PYGZob{}}
+        \PYG{n}{res}\PYG{o}{.}\PYG{n+na}{add}\PYG{o}{(}\PYG{k}{new} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}\PYGZgt{}(}\PYG{n}{stack}\PYG{o}{));}
+        \PYG{k}{return}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{for}\PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{nums}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{;} \PYG{n}{i}\PYG{o}{++)\PYGZob{}}
+        \PYG{c+c1}{// 不满足条件}
+        \PYG{k}{if} \PYG{o}{(}\PYG{n}{visited}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{||} \PYG{o}{(}\PYG{n}{i} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{nums}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{==} \PYG{n}{nums}\PYG{o}{[}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{]} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{o}{!}\PYG{n}{visited}\PYG{o}{[}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{]))} \PYG{o}{\PYGZob{}}
+            \PYG{k}{continue}\PYG{o}{;}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{c+c1}{// 做选择}
+        \PYG{n}{visited}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{=} \PYG{k+kc}{true}\PYG{o}{;}
+        \PYG{n}{stack}\PYG{o}{.}\PYG{n+na}{push}\PYG{o}{(}\PYG{n}{nums}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]);}
+
+        \PYG{n}{backtracking}\PYG{o}{(}\PYG{n}{nums}\PYG{o}{,} \PYG{n}{stack}\PYG{o}{);}
+
+        \PYG{c+c1}{// 撤销选择}
+        \PYG{n}{stack}\PYG{o}{.}\PYG{n+na}{pop}\PYG{o}{();}
+        \PYG{n}{visited}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{=} \PYG{k+kc}{false}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,38 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n+nf}{bucketSort}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{arr}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{bucketCount}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{k}{if} \PYG{o}{(}\PYG{n}{arr} \PYG{o}{==} \PYG{k+kc}{null} \PYG{o}{||} \PYG{n}{arr}\PYG{o}{.}\PYG{n+na}{length} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{arr}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k+kt}{int} \PYG{n}{n} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{;}
+    \PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{res} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{int}\PYG{o}{[}\PYG{n}{n}\PYG{o}{];}
+    \PYG{k+kt}{int} \PYG{n}{min} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{[}\PYG{l+m+mi}{0}\PYG{o}{],} \PYG{n}{max} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{[}\PYG{l+m+mi}{0}\PYG{o}{];}
+    \PYG{c+c1}{// 最大最小值}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{o}{;} \PYG{o}{++}\PYG{n}{i}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{n}{min} \PYG{o}{=} \PYG{n}{Math}\PYG{o}{.}\PYG{n+na}{min}\PYG{o}{(}\PYG{n}{min}\PYG{o}{,} \PYG{n}{arr}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]);}
+        \PYG{n}{max} \PYG{o}{=} \PYG{n}{Math}\PYG{o}{.}\PYG{n+na}{max}\PYG{o}{(}\PYG{n}{max}\PYG{o}{,} \PYG{n}{arr}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]);}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{c+c1}{// 桶容量}
+    \PYG{k+kt}{int} \PYG{n}{gap} \PYG{o}{=} \PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{)}\PYG{n}{Math}\PYG{o}{.}\PYG{n+na}{ceil}\PYG{o}{((}\PYG{k+kt}{double}\PYG{o}{)(}\PYG{n}{max} \PYG{o}{\PYGZhy{}} \PYG{n}{min}\PYG{o}{)} \PYG{o}{/} \PYG{n}{bucketCount}\PYG{o}{);}
+    \PYG{n}{List}\PYG{o}{[]} \PYG{n}{buckets} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ArrayList}\PYG{o}{[}\PYG{n}{bucketCount}\PYG{o}{];}
+    \PYG{c+c1}{// 元素放入相应桶中}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{o}{;} \PYG{o}{++}\PYG{n}{i}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{idx} \PYG{o}{=} \PYG{o}{(}\PYG{n}{arr}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{min}\PYG{o}{)} \PYG{o}{/} \PYG{n}{gap}\PYG{o}{;}
+        \PYG{k}{if} \PYG{o}{(}\PYG{n}{buckets}\PYG{o}{[}\PYG{n}{idx}\PYG{o}{]} \PYG{o}{==} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{n}{buckets}\PYG{o}{[}\PYG{n}{idx}\PYG{o}{]} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}\PYGZgt{}();}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{n}{buckets}\PYG{o}{[}\PYG{n}{idx}\PYG{o}{].}\PYG{n+na}{add}\PYG{o}{(}\PYG{n}{arr}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]);}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k+kt}{int} \PYG{n}{k} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{bucketCount}\PYG{o}{;} \PYG{o}{++}\PYG{n}{i}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{if} \PYG{o}{(}\PYG{n}{buckets}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{==} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{k}{continue}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{c+c1}{// 集合排序}
+        \PYG{n}{Collections}\PYG{o}{.}\PYG{n+na}{sort}\PYG{o}{(}\PYG{n}{buckets}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]);}
+        \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{buckets}\PYG{o}{[}\PYG{n}{i}\PYG{o}{].}\PYG{n+na}{size}\PYG{o}{();} \PYG{o}{++}\PYG{n}{j}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{n}{res}\PYG{o}{[}\PYG{n}{k}\PYG{o}{++]} \PYG{o}{=} \PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{)}\PYG{n}{buckets}\PYG{o}{[}\PYG{n}{i}\PYG{o}{].}\PYG{n+na}{get}\PYG{o}{(}\PYG{n}{j}\PYG{o}{);}
+        \PYG{o}{\PYGZcb{}}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{n}{res}\PYG{o}{;}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

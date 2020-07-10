@@ -65,6 +65,10 @@ void monotoneStack(int[] arr) {
 
 ## 题目
 
+### 402. remove-k-digits
+
+------
+
 **Description:**
 
 Given a non-negative integer *num* represented as a string, remove *k* digits from the number so that the new number is the smallest possible.
@@ -148,5 +152,96 @@ public class Solution {
     }
 }
 // @lc code=end
+```
+
+### 84. largest-rectangle-in-histogram
+
+------
+
+**Description:**
+
+Given *n* non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.
+
+ 
+
+![img](https://assets.leetcode.com/uploads/2018/10/12/histogram.png)
+Above is a histogram where width of each bar is 1, given height = `[2,1,5,6,2,3]`.
+
+![img](https://assets.leetcode.com/uploads/2018/10/12/histogram_area.png)
+The largest rectangle is shown in the shaded area, which has area = `10` unit.
+
+**Example:**
+
+```
+Input: [2,1,5,6,2,3]
+Output: 10
+```
+
+**Code:**
+
+```java
+class Solution {
+    public int largestRectangleArea(int[] heights) {
+        if (heights == null || heights.length == 0) {
+            return 0;
+        }
+        int n = heights.length;
+        // 单调增栈：用于定位左右小于自己的最近元素
+        Deque<Integer> stack = new ArrayDeque<>();
+        int ans = 0;
+        for (int i = 0; i <= n; i++) {
+            // 处理全部单调增情况
+            int k = i == n ? 0 : heights[i];
+            if (stack.isEmpty() || k >= heights[stack.peek()]) {
+                stack.push(i);
+            } else {
+                int top = stack.pop();
+                ans = Math.max(ans, heights[top] * (stack.isEmpty() ? i : i - 1 - stack.peek()));
+                i--;
+            }
+        }
+        return ans;
+    }
+}
+```
+
+### 42. trapping-rain-water
+
+------
+
+Given *n* non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it is able to trap after raining.
+
+![img](https://assets.leetcode.com/uploads/2018/10/22/rainwatertrap.png)
+The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water (blue section) are being trapped. **Thanks Marcos** for contributing this image!
+
+**Example:**
+
+```
+Input: [0,1,0,2,1,0,1,3,2,1,2,1]
+Output: 6
+```
+
+**Code:**
+
+```java
+class Solution {
+    public int trap(int[] height) {
+        if (height == null || height.length == 0) {
+            return 0;
+        }
+        Deque<Integer> stack = new ArrayDeque<>();
+        int ans = 0;
+        for (int i = 0; i < height.length; i++) {
+            if (stack.isEmpty() || height[i] <= height[stack.peek()]) {
+                stack.push(i);
+            } else {
+                int top = stack.pop();
+                ans += stack.isEmpty() ? 0 : (Math.min(height[stack.peek()], height[i]) - height[top]) * (i - stack.peek() - 1);
+                i--;
+            }
+        }
+        return ans;
+    }
+}
 ```
 

@@ -13,8 +13,12 @@ public String manacher(String s) {
     int[] p = new int[sb.length()];
     for (int i = 1; i < sb.length(); i++) {
         p[i] = mx > i ? Math.min(p[2 * id - i], mx - i) : 1;
-        while (sb.charAt(i + p[i]) == sb.charAt(i - p[i])) {
-            p[i]++;
+        while (i + p[i] < sb.length() && i - p[i] >= 0) {
+            if (sb.charAt(i + p[i]) == sb.charAt(i - p[i])) {
+                p[i]++;
+            } else {
+                break;
+            }
         }
         if (mx < i + p[i]) {
             mx = i + p[i];

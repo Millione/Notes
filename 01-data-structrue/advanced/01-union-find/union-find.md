@@ -60,6 +60,52 @@ class UnionFind {
 
 ## 题目
 
+### 128. longest-consecutive-sequence
+
+------
+
+**Description:**
+
+Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+
+Your algorithm should run in O(*n*) complexity.
+
+**Example:**
+
+```
+Input: [100, 4, 200, 1, 3, 2]
+Output: 4
+Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
+```
+
+**Code:**
+
+```java
+class Solution {
+    Map<Integer, Integer> map;
+    public int longestConsecutive(int[] nums) {
+        map = new HashMap<>();
+        for (int num : nums) {
+            map.put(num, num + 1);
+        }
+        int ans = 0;
+        for (int num : nums) {
+            int ret = find(num + 1);
+            ans = Math.max(ans, ret - num);
+        }
+        return ans;
+    }
+    private int find(int x) {
+        if (map.containsKey(x)) {
+            map.put(x, find(map.get(x)));
+            return map.get(x);
+        } else {
+            return x;
+        }
+    }
+}
+```
+
 ### 684. redundant-connection
 
 ------

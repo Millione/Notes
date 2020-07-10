@@ -1,0 +1,36 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{ListNode} \PYG{o}{\PYGZob{}}
+
+    \PYG{k+kd}{public} \PYG{k+kt}{int} \PYG{n}{val}\PYG{o}{;}
+    \PYG{k+kd}{public} \PYG{n}{ListNode} \PYG{n}{next} \PYG{o}{=} \PYG{k+kc}{null}\PYG{o}{;}
+
+    \PYG{n}{ListNode}\PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{val}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{this}\PYG{o}{.}\PYG{n+na}{val} \PYG{o}{=} \PYG{n}{val}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{n+nf}{ListNode}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{arr}\PYG{o}{)\PYGZob{}}
+        \PYG{k}{if}\PYG{o}{(}\PYG{n}{arr} \PYG{o}{==} \PYG{k+kc}{null} \PYG{o}{||} \PYG{n}{arr}\PYG{o}{.}\PYG{n+na}{length} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{o}{)\PYGZob{}}
+            \PYG{k}{throw} \PYG{k}{new} \PYG{n}{IllegalArgumentException}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}arr can not be empty\PYGZdq{}}\PYG{o}{);}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{k}{this}\PYG{o}{.}\PYG{n+na}{val} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{[}\PYG{l+m+mi}{0}\PYG{o}{];}
+        \PYG{n}{ListNode} \PYG{n}{cur} \PYG{o}{=} \PYG{k}{this}\PYG{o}{;}
+        \PYG{k}{for}\PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{arr}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{;} \PYG{n}{i}\PYG{o}{++)\PYGZob{}}
+            \PYG{n}{cur}\PYG{o}{.}\PYG{n+na}{next} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ListNode}\PYG{o}{(}\PYG{n}{arr}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]);}
+            \PYG{n}{cur} \PYG{o}{=} \PYG{n}{cur}\PYG{o}{.}\PYG{n+na}{next}\PYG{o}{;}
+        \PYG{o}{\PYGZcb{}}
+    \PYG{o}{\PYGZcb{}}
+
+    \PYG{n+nd}{@Override}
+    \PYG{k+kd}{public}  \PYG{n}{String} \PYG{n+nf}{toString}\PYG{o}{()\PYGZob{}}
+        \PYG{n}{StringBuilder} \PYG{n}{res} \PYG{o}{=} \PYG{k}{new} \PYG{n}{StringBuilder}\PYG{o}{();}
+        \PYG{n}{ListNode} \PYG{n}{cur} \PYG{o}{=} \PYG{k}{this}\PYG{o}{;}
+        \PYG{k}{while}\PYG{o}{(}\PYG{n}{cur} \PYG{o}{!=} \PYG{k+kc}{null}\PYG{o}{)\PYGZob{}}
+            \PYG{n}{res}\PYG{o}{.}\PYG{n+na}{append}\PYG{o}{(}\PYG{n}{cur}\PYG{o}{.}\PYG{n+na}{val} \PYG{o}{+} \PYG{l+s}{\PYGZdq{}\PYGZhy{}\PYGZgt{}\PYGZdq{}}\PYG{o}{);}
+            \PYG{n}{cur} \PYG{o}{=} \PYG{n}{cur}\PYG{o}{.}\PYG{n+na}{next}\PYG{o}{;}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{n}{res}\PYG{o}{.}\PYG{n+na}{append}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}NULL\PYGZdq{}}\PYG{o}{);}
+        \PYG{k}{return} \PYG{n}{res}\PYG{o}{.}\PYG{n+na}{toString}\PYG{o}{();}
+    \PYG{o}{\PYGZcb{}}
+
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

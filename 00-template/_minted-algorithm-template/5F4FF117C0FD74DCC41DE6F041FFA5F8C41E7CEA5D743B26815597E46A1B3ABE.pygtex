@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Collections}\PYG{o}{.}\PYG{n+na}{sort}\PYG{o}{(}\PYG{n}{vals}\PYG{o}{,} \PYG{k}{new} \PYG{n}{Comparator}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}()} \PYG{o}{\PYGZob{}}
+    \PYG{k+kd}{public} \PYG{k+kt}{int} \PYG{n+nf}{compare}\PYG{o}{(}\PYG{n}{T} \PYG{n}{o1}\PYG{o}{,} \PYG{n}{T} \PYG{n}{o2}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{o1}\PYG{o}{.}\PYG{n+na}{compareTo}\PYG{o}{(}\PYG{n}{o2}\PYG{o}{);}
+    \PYG{o}{\PYGZcb{}}
+\PYG{o}{\PYGZcb{});}
+
+\PYG{n}{Arrays}\PYG{o}{.}\PYG{n+na}{sort}\PYG{o}{(}\PYG{n}{vals}\PYG{o}{,} \PYG{k}{new} \PYG{n}{Comparator}\PYG{o}{\PYGZlt{}}\PYG{n}{T}\PYG{o}{\PYGZgt{}()} \PYG{o}{\PYGZob{}}  
+    \PYG{k+kd}{public} \PYG{k+kt}{int} \PYG{n+nf}{compare}\PYG{o}{(}\PYG{n}{T} \PYG{n}{o1}\PYG{o}{,} \PYG{n}{T} \PYG{n}{o2}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{o1}\PYG{o}{.}\PYG{n+na}{compareTo}\PYG{o}{(}\PYG{n}{o2}\PYG{o}{);}
+    \PYG{o}{\PYGZcb{}}  
+\PYG{o}{\PYGZcb{});}
+\end{Verbatim}

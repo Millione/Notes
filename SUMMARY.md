@@ -30,6 +30,8 @@
         * [贪心](02-algorithm/01-basic/08-greedy/greedy.md)
     * 进阶
         * 动态规划
+            * [线性](02-algorithm/02-advanced/01-dp/01-线性/linear.md)
+            * [区间](02-algorithm/02-advanced/01-dp/02-区间/interval.md)
         * 图论
             * [连通性](02-algorithm/02-advanced/02-graph/01-connected/connected.md)
             * [拓扑排序](02-algorithm/02-advanced/02-graph/02-topological/topological.md)
@@ -37,4 +39,7 @@
             * [KMP](02-algorithm/02-advanced/03-string/01-kmp/kmp.md)
             * [Manacher](02-algorithm/02-advanced/03-string/02-manacher/manacher.md)
         * 数学
+            * [大数](02-algorithm/02-advanced/04-math/01-big-num/big-num.md)
+            * [快速幂](02-algorithm/02-advanced/04-math/02-quick-pow/quick-pow.md)
+            * [数论](02-algorithm/02-advanced/04-math/03-number-theory/number-theory.md)
 

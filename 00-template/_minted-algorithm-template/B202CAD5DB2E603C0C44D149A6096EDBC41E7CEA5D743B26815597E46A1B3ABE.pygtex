@@ -1,0 +1,35 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public} \PYG{n}{String} \PYG{n+nf}{manacher}\PYG{o}{(}\PYG{n}{String} \PYG{n}{s}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{n} \PYG{o}{=} \PYG{n}{s}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{();}
+    \PYG{n}{StringBuilder} \PYG{n}{sb} \PYG{o}{=} \PYG{k}{new} \PYG{n}{StringBuilder}\PYG{o}{();}
+    \PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{append}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}\PYGZdl{}\PYGZdq{}}\PYG{o}{);}
+    \PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{append}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}\PYGZsh{}\PYGZdq{}}\PYG{o}{);}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{o}{;} \PYG{n}{i}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+        \PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{append}\PYG{o}{(}\PYG{n}{s}\PYG{o}{.}\PYG{n+na}{substring}\PYG{o}{(}\PYG{n}{i}\PYG{o}{,} \PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{));}
+        \PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{append}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}\PYGZsh{}\PYGZdq{}}\PYG{o}{);}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{append}\PYG{o}{(}\PYG{l+s}{\PYGZdq{}0\PYGZdq{}}\PYG{o}{);}
+    \PYG{k+kt}{int} \PYG{n}{mx} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{,} \PYG{n}{id} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;}
+    \PYG{k+kt}{int} \PYG{n}{resLen} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{,} \PYG{n}{resCenter} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} 
+    \PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{p} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{int}\PYG{o}{[}\PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{()];}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{();} \PYG{n}{i}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+        \PYG{n}{p}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{=} \PYG{n}{mx} \PYG{o}{\PYGZgt{}} \PYG{n}{i} \PYG{o}{?} \PYG{n}{Math}\PYG{o}{.}\PYG{n+na}{min}\PYG{o}{(}\PYG{n}{p}\PYG{o}{[}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{id} \PYG{o}{\PYGZhy{}} \PYG{n}{i}\PYG{o}{],} \PYG{n}{mx} \PYG{o}{\PYGZhy{}} \PYG{n}{i}\PYG{o}{)} \PYG{o}{:} \PYG{l+m+mi}{1}\PYG{o}{;}
+        \PYG{k}{while} \PYG{o}{(}\PYG{n}{i} \PYG{o}{+} \PYG{n}{p}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{\PYGZlt{}} \PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{()} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{n}{p}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{k}{if} \PYG{o}{(}\PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{charAt}\PYG{o}{(}\PYG{n}{i} \PYG{o}{+} \PYG{n}{p}\PYG{o}{[}\PYG{n}{i}\PYG{o}{])} \PYG{o}{==} \PYG{n}{sb}\PYG{o}{.}\PYG{n+na}{charAt}\PYG{o}{(}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{n}{p}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]))} \PYG{o}{\PYGZob{}}
+                \PYG{n}{p}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]++;}
+            \PYG{o}{\PYGZcb{}} \PYG{k}{else} \PYG{o}{\PYGZob{}}
+                \PYG{k}{break}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{k}{if} \PYG{o}{(}\PYG{n}{mx} \PYG{o}{\PYGZlt{}} \PYG{n}{i} \PYG{o}{+} \PYG{n}{p}\PYG{o}{[}\PYG{n}{i}\PYG{o}{])} \PYG{o}{\PYGZob{}}
+            \PYG{n}{mx} \PYG{o}{=} \PYG{n}{i} \PYG{o}{+} \PYG{n}{p}\PYG{o}{[}\PYG{n}{i}\PYG{o}{];}
+            \PYG{n}{id} \PYG{o}{=} \PYG{n}{i}\PYG{o}{;}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{k}{if} \PYG{o}{(}\PYG{n}{resLen} \PYG{o}{\PYGZlt{}} \PYG{n}{p}\PYG{o}{[}\PYG{n}{i}\PYG{o}{])} \PYG{o}{\PYGZob{}}
+            \PYG{n}{resLen} \PYG{o}{=} \PYG{n}{p}\PYG{o}{[}\PYG{n}{i}\PYG{o}{];}
+            \PYG{n}{resCenter} \PYG{o}{=} \PYG{n}{i}\PYG{o}{;}
+        \PYG{o}{\PYGZcb{}}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{n}{s}\PYG{o}{.}\PYG{n+na}{substring}\PYG{o}{((}\PYG{n}{resCenter} \PYG{o}{\PYGZhy{}} \PYG{n}{resLen}\PYG{o}{)} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{o}{,} \PYG{o}{(}\PYG{n}{resCenter} \PYG{o}{+} \PYG{n}{resLen}\PYG{o}{)} \PYG{o}{/} \PYG{l+m+mi}{2} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{);}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

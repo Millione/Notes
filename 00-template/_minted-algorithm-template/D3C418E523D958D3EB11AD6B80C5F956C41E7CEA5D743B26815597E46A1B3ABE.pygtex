@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{class} \PYG{n+nc}{Matrix} \PYG{o}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{row}\PYG{o}{;}
+    \PYG{k+kt}{int} \PYG{n}{col}\PYG{o}{;}
+    \PYG{k+kt}{int}\PYG{o}{[][]} \PYG{n}{m}\PYG{o}{;}
+
+    \PYG{k+kd}{public} \PYG{n+nf}{Matrix}\PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{row}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{col}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{this}\PYG{o}{.}\PYG{n+na}{row} \PYG{o}{=} \PYG{n}{row}\PYG{o}{;}
+        \PYG{k}{this}\PYG{o}{.}\PYG{n+na}{col} \PYG{o}{=} \PYG{n}{col}\PYG{o}{;}
+        \PYG{n}{m} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{int}\PYG{o}{[}\PYG{n}{row}\PYG{o}{][}\PYG{n}{col}\PYG{o}{];}
+    \PYG{o}{\PYGZcb{}}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{k+kd}{static} \PYG{k+kd}{final} \PYG{k+kt}{int} \PYG{n}{MOD} \PYG{o}{=} \PYG{l+m+mi}{10000}\PYG{o}{;}
+
+\PYG{k+kd}{public} \PYG{n}{Matrix} \PYG{n+nf}{mul}\PYG{o}{(}\PYG{n}{Matrix} \PYG{n}{a}\PYG{o}{,} \PYG{n}{Matrix} \PYG{n}{b}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{n}{Matrix} \PYG{n}{c} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Matrix}\PYG{o}{(}\PYG{n}{a}\PYG{o}{.}\PYG{n+na}{row}\PYG{o}{,} \PYG{n}{b}\PYG{o}{.}\PYG{n+na}{col}\PYG{o}{);} \PYG{c+c1}{// 注意这里}
+
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{row}\PYG{o}{;} \PYG{n}{i}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{b}\PYG{o}{.}\PYG{n+na}{col}\PYG{o}{;} \PYG{n}{j}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+            \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{k} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{k} \PYG{o}{\PYGZlt{}} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{col}\PYG{o}{;} \PYG{n}{k}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{c}\PYG{o}{.}\PYG{n+na}{m}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]} \PYG{o}{=} \PYG{o}{(}\PYG{n}{c}\PYG{o}{.}\PYG{n+na}{m}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{j}\PYG{o}{]} \PYG{o}{+} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{m}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{k}\PYG{o}{]} \PYG{o}{*} \PYG{n}{b}\PYG{o}{.}\PYG{n+na}{m}\PYG{o}{[}\PYG{n}{k}\PYG{o}{][}\PYG{n}{j}\PYG{o}{])} \PYG{o}{\PYGZpc{}} \PYG{n}{MOD}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{o}{\PYGZcb{}}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{n}{c}\PYG{o}{;}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{k+kd}{public} \PYG{n}{Matrix} \PYG{n+nf}{pow}\PYG{o}{(}\PYG{n}{Matrix} \PYG{n}{a}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{k}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{n}{Matrix} \PYG{n}{res} \PYG{o}{=} \PYG{k}{new} \PYG{n}{Matrix}\PYG{o}{(}\PYG{n}{a}\PYG{o}{.}\PYG{n+na}{row}\PYG{o}{,} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{col}\PYG{o}{);} \PYG{c+c1}{// 方阵}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{a}\PYG{o}{.}\PYG{n+na}{row}\PYG{o}{;} \PYG{n}{i}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+        \PYG{n}{res}\PYG{o}{.}\PYG{n+na}{m}\PYG{o}{[}\PYG{n}{i}\PYG{o}{][}\PYG{n}{i}\PYG{o}{]} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{while} \PYG{o}{(}\PYG{n}{k} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{if} \PYG{o}{((}\PYG{n}{k} \PYG{o}{\PYGZam{}} \PYG{l+m+mi}{1}\PYG{o}{)} \PYG{o}{!=} \PYG{l+m+mi}{0}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{n}{res} \PYG{o}{=} \PYG{n}{mul}\PYG{o}{(}\PYG{n}{res}\PYG{o}{,} \PYG{n}{a}\PYG{o}{);}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{n}{a} \PYG{o}{=} \PYG{n}{mul}\PYG{o}{(}\PYG{n}{a}\PYG{o}{,} \PYG{n}{a}\PYG{o}{);}
+        \PYG{n}{k} \PYG{o}{\PYGZgt{}\PYGZgt{}=} \PYG{l+m+mi}{1}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{n}{res}\PYG{o}{;}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}
