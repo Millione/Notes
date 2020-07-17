@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{class} \PYG{n+nc}{DoubleLinkedNode}\PYG{o}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{key}\PYG{o}{;}
+    \PYG{k+kt}{int} \PYG{n}{value}\PYG{o}{;}
+    \PYG{n}{DoubleLinkedNode} \PYG{n}{pre}\PYG{o}{;}
+    \PYG{n}{DoubleLinkedNode} \PYG{n}{post}\PYG{o}{;}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{k+kd}{private} \PYG{n}{DoubleLinkedNode} \PYG{n}{head}\PYG{o}{,} \PYG{n}{tail}\PYG{o}{;}
+
+\PYG{k+kd}{private} \PYG{k+kt}{void} \PYG{n+nf}{addNode}\PYG{o}{(}\PYG{n}{DoubleLinkedNode} \PYG{n}{node}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{n}{node}\PYG{o}{.}\PYG{n+na}{pre} \PYG{o}{=} \PYG{n}{head}\PYG{o}{;}
+    \PYG{n}{node}\PYG{o}{.}\PYG{n+na}{post} \PYG{o}{=} \PYG{n}{head}\PYG{o}{.}\PYG{n+na}{post}\PYG{o}{;}
+    \PYG{n}{head}\PYG{o}{.}\PYG{n+na}{post}\PYG{o}{.}\PYG{n+na}{pre} \PYG{o}{=} \PYG{n}{node}\PYG{o}{;}
+    \PYG{n}{head}\PYG{o}{.}\PYG{n+na}{post} \PYG{o}{=} \PYG{n}{node}\PYG{o}{;}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{k+kd}{private} \PYG{n}{DoubleLinkedNode} \PYG{n+nf}{removeNode}\PYG{o}{(}\PYG{n}{DoubleLinkedNode} \PYG{n}{node}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{n}{node}\PYG{o}{.}\PYG{n+na}{post}\PYG{o}{.}\PYG{n+na}{pre} \PYG{o}{=} \PYG{n}{node}\PYG{o}{.}\PYG{n+na}{pre}\PYG{o}{;}
+    \PYG{n}{node}\PYG{o}{.}\PYG{n+na}{pre}\PYG{o}{.}\PYG{n+na}{post} \PYG{o}{=} \PYG{n}{node}\PYG{o}{.}\PYG{n+na}{post}\PYG{o}{;}
+    \PYG{k}{return} \PYG{n}{node}\PYG{o}{;}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{k+kd}{private} \PYG{k+kt}{void} \PYG{n+nf}{moveNode}\PYG{o}{(}\PYG{n}{DoubleLinkedNode} \PYG{n}{node}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{n}{removeNode}\PYG{o}{(}\PYG{n}{node}\PYG{o}{);}
+    \PYG{n}{addNode}\PYG{o}{(}\PYG{n}{node}\PYG{o}{);}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{k+kd}{private} \PYG{n}{DoubleLinkedNode} \PYG{n+nf}{removeLastNode}\PYG{o}{()} \PYG{o}{\PYGZob{}}
+    \PYG{n}{DoubleLinkedNode} \PYG{n}{node} \PYG{o}{=} \PYG{n}{tail}\PYG{o}{.}\PYG{n+na}{pre}\PYG{o}{;}
+    \PYG{k}{return} \PYG{n}{removeNode}\PYG{o}{(}\PYG{n}{node}\PYG{o}{);}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

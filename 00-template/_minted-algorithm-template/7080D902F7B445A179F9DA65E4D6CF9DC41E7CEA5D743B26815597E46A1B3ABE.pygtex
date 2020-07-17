@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{class} \PYG{n+nc}{TopologySort}\PYG{o}{\PYGZob{}}
+
+    \PYG{k+kd}{private} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}[]} \PYG{n}{G}\PYG{o}{;}
+    \PYG{c+c1}{// 入度数组}
+    \PYG{k+kd}{private} \PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{deg}\PYG{o}{;}
+    \PYG{c+c1}{// 顶点数、边数}
+    \PYG{k+kd}{private} \PYG{k+kt}{int} \PYG{n}{n}\PYG{o}{,} \PYG{n}{m}\PYG{o}{;}
+
+    \PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{topoSort}\PYG{o}{()} \PYG{o}{\PYGZob{}}
+        \PYG{n}{Queue}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}} \PYG{n}{queue} \PYG{o}{=} \PYG{k}{new} \PYG{n}{LinkedList}\PYG{o}{\PYGZlt{}\PYGZgt{}();}
+        \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{;} \PYG{n}{i}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+            \PYG{k}{if} \PYG{o}{(}\PYG{n}{deg}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{queue}\PYG{o}{.}\PYG{n+na}{add}\PYG{o}{(}\PYG{n}{i}\PYG{o}{);}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{k}{while} \PYG{o}{(!}\PYG{n}{queue}\PYG{o}{.}\PYG{n+na}{isEmpty}\PYG{o}{())} \PYG{o}{\PYGZob{}}
+            \PYG{k+kt}{int} \PYG{n}{u} \PYG{o}{=} \PYG{n}{queue}\PYG{o}{.}\PYG{n+na}{poll}\PYG{o}{();}
+            \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{G}\PYG{o}{[}\PYG{n}{u}\PYG{o}{].}\PYG{n+na}{size}\PYG{o}{();} \PYG{n}{i}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+                \PYG{k+kt}{int} \PYG{n}{v} \PYG{o}{=} \PYG{n}{G}\PYG{o}{[}\PYG{n}{u}\PYG{o}{].}\PYG{n+na}{get}\PYG{o}{(}\PYG{n}{i}\PYG{o}{);}
+                \PYG{k}{if} \PYG{o}{(\PYGZhy{}\PYGZhy{}}\PYG{n}{deg}\PYG{o}{[}\PYG{n}{v}\PYG{o}{]} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                    \PYG{n}{queue}\PYG{o}{.}\PYG{n+na}{add}\PYG{o}{(}\PYG{n}{v}\PYG{o}{);}
+                \PYG{o}{\PYGZcb{}}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{o}{\PYGZcb{}}
+    \PYG{o}{\PYGZcb{}}
+
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

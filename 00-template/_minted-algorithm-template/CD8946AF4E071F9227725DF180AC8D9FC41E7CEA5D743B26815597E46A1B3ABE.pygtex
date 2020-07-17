@@ -1,0 +1,32 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n+nf}{redixSort}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{arr}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{len}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{k}{if} \PYG{o}{(}\PYG{n}{arr} \PYG{o}{==} \PYG{k+kc}{null} \PYG{o}{||} \PYG{n}{arr}\PYG{o}{.}\PYG{n+na}{length} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{arr}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k+kt}{int} \PYG{n}{n} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{;}
+    \PYG{k+kt}{int} \PYG{n}{exp} \PYG{o}{=} \PYG{l+m+mi}{10}\PYG{o}{,} \PYG{n}{R} \PYG{o}{=} \PYG{l+m+mi}{10}\PYG{o}{;}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{len}\PYG{o}{;} \PYG{o}{++}\PYG{n}{i}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{n}{List}\PYG{o}{[]} \PYG{n}{digits} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ArrayList}\PYG{o}{[}\PYG{n}{R} \PYG{o}{*} \PYG{l+m+mi}{2}\PYG{o}{];}
+        \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{j} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{o}{;} \PYG{o}{++}\PYG{n}{j}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{c+c1}{// 特定位上的值}
+            \PYG{k+kt}{int} \PYG{n}{bucket} \PYG{o}{=} \PYG{o}{(}\PYG{n}{arr}\PYG{o}{[}\PYG{n}{j}\PYG{o}{]} \PYG{o}{/} \PYG{n}{exp}\PYG{o}{)} \PYG{o}{\PYGZpc{}} \PYG{l+m+mi}{10} \PYG{o}{+} \PYG{n}{R}\PYG{o}{;}
+            \PYG{k}{if} \PYG{o}{(}\PYG{n}{digits}\PYG{o}{[}\PYG{n}{bucket}\PYG{o}{]} \PYG{o}{==} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{digits}\PYG{o}{[}\PYG{n}{bucket}\PYG{o}{]} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ArrayList}\PYG{o}{();}
+            \PYG{o}{\PYGZcb{}}
+            \PYG{n}{digits}\PYG{o}{[}\PYG{n}{bucket}\PYG{o}{].}\PYG{n+na}{add}\PYG{o}{(}\PYG{n}{arr}\PYG{o}{[}\PYG{n}{j}\PYG{o}{]);}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{k+kt}{int} \PYG{n}{index} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;}
+        \PYG{c+c1}{// 完成一次排序后拷贝}
+        \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{k} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{k} \PYG{o}{\PYGZlt{}} \PYG{n}{digits}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{;} \PYG{o}{++}\PYG{n}{k}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{k}{if} \PYG{o}{(}\PYG{n}{digits}\PYG{o}{[}\PYG{n}{k}\PYG{o}{]} \PYG{o}{==} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{k}{continue}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}}
+            \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{l} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{l} \PYG{o}{\PYGZlt{}} \PYG{n}{digits}\PYG{o}{[}\PYG{n}{k}\PYG{o}{].}\PYG{n+na}{size}\PYG{o}{();} \PYG{o}{++}\PYG{n}{l}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{arr}\PYG{o}{[}\PYG{n}{index}\PYG{o}{++]} \PYG{o}{=} \PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{)}\PYG{n}{digits}\PYG{o}{[}\PYG{n}{k}\PYG{o}{].}\PYG{n+na}{get}\PYG{o}{(}\PYG{n}{l}\PYG{o}{);}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{n}{exp} \PYG{o}{*=} \PYG{l+m+mi}{10}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{n}{arr}\PYG{o}{;}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

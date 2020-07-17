@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/**}
+\PYG{c+cm}{ * 单调队列: 用来求出在数组的某个区间范围内的最值}
+\PYG{c+cm}{ */}
+\PYG{k+kt}{void} \PYG{n+nf}{monotoneQueue}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{arr}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{k}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{n} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{;}
+    \PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}} \PYG{n}{res} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ArrayLise}\PYG{o}{\PYGZlt{}\PYGZgt{}();}
+    \PYG{n}{Deque}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}} \PYG{n}{deque} \PYG{o}{=} \PYG{k}{new} \PYG{n}{LinkedList}\PYG{o}{\PYGZlt{}\PYGZgt{}();}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{o}{;} \PYG{n}{i}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{while} \PYG{o}{(!}\PYG{n}{deque}\PYG{o}{.}\PYG{n+na}{isEmpty}\PYG{o}{()} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{arr}\PYG{o}{[}\PYG{n}{deque}\PYG{o}{.}\PYG{n+na}{peekLast}\PYG{o}{()]} \PYG{o}{\PYGZlt{}=} \PYG{n}{nums}\PYG{o}{[}\PYG{n}{i}\PYG{o}{])} \PYG{o}{\PYGZob{}}
+            \PYG{n}{deque}\PYG{o}{.}\PYG{n+na}{pollLast}\PYG{o}{();}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{n}{deque}\PYG{o}{.}\PYG{n+na}{offerLast}\PYG{o}{(}\PYG{n}{i}\PYG{o}{);}
+        \PYG{c+c1}{// k：窗口大小}
+        \PYG{k}{if} \PYG{o}{(}\PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{n}{k} \PYG{o}{==} \PYG{n}{deque}\PYG{o}{.}\PYG{n+na}{peekFirst}\PYG{o}{())} \PYG{o}{\PYGZob{}}
+            \PYG{n}{deque}\PYG{o}{.}\PYG{n+na}{pollFirst}\PYG{o}{();}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{c+c1}{// 窗口内最大值}
+        \PYG{k}{if} \PYG{o}{(}\PYG{n}{i} \PYG{o}{\PYGZgt{}=} \PYG{n}{k} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{n}{res}\PYG{o}{.}\PYG{n+na}{add}\PYG{o}{(}\PYG{n}{arr}\PYG{o}{[}\PYG{n}{deque}\PYG{o}{.}\PYG{n+na}{peekFirst}\PYG{o}{()]);}
+        \PYG{o}{\PYGZcb{}}
+    \PYG{o}{\PYGZcb{}}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

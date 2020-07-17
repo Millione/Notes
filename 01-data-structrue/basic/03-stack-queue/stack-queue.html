@@ -1,0 +1,1140 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>栈和队列 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../04-tree/tree.html" />
+    
+    
+    <link rel="prev" href="../02-linkedlist/linkedlist.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    数据结构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../01-array/array.html">
+            
+                <a href="../01-array/array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../02-linkedlist/linkedlist.html">
+            
+                <a href="../02-linkedlist/linkedlist.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.3" data-path="stack-queue.html">
+            
+                <a href="stack-queue.html">
+            
+                    
+                    栈和队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../04-tree/tree.html">
+            
+                <a href="../04-tree/tree.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../05-set/set.html">
+            
+                <a href="../05-set/set.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../06-map/map.html">
+            
+                <a href="../06-map/map.html">
+            
+                    
+                    哈希表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../07-heap/heap.html">
+            
+                <a href="../07-heap/heap.html">
+            
+                    
+                    堆
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../advanced/01-union-find/union-find.html">
+            
+                <a href="../../advanced/01-union-find/union-find.html">
+            
+                    
+                    并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../advanced/02-binary-indexed-tree/binary-indexed-tree.html">
+            
+                <a href="../../advanced/02-binary-indexed-tree/binary-indexed-tree.html">
+            
+                    
+                    树状数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../advanced/03-segment-tree/segment-tree.html">
+            
+                <a href="../../advanced/03-segment-tree/segment-tree.html">
+            
+                    
+                    线段树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../../advanced/04-trie/trie.html">
+            
+                <a href="../../advanced/04-trie/trie.html">
+            
+                    
+                    字典树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../../advanced/05-monotone-stack/monotone-stack.html">
+            
+                <a href="../../advanced/05-monotone-stack/monotone-stack.html">
+            
+                    
+                    单调栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../../advanced/06-monotone-queue/monotone-queue.html">
+            
+                <a href="../../advanced/06-monotone-queue/monotone-queue.html">
+            
+                    
+                    单调队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../02-algorithm/01-basic/01-sort/sort.html">
+            
+                <a href="../../../02-algorithm/01-basic/01-sort/sort.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../../02-algorithm/01-basic/02-binary-search/binary-search.html">
+            
+                <a href="../../../02-algorithm/01-basic/02-binary-search/binary-search.html">
+            
+                    
+                    二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../../02-algorithm/01-basic/03-two-pointer/two-pointer.html">
+            
+                <a href="../../../02-algorithm/01-basic/03-two-pointer/two-pointer.html">
+            
+                    
+                    双指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../../02-algorithm/01-basic/04-sliding-window/sliding-window.html">
+            
+                <a href="../../../02-algorithm/01-basic/04-sliding-window/sliding-window.html">
+            
+                    
+                    滑动窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../../02-algorithm/01-basic/05-divide-and-conquer/divide-and-conquer.html">
+            
+                <a href="../../../02-algorithm/01-basic/05-divide-and-conquer/divide-and-conquer.html">
+            
+                    
+                    分治
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../../02-algorithm/01-basic/06-backtracking/backtracking.html">
+            
+                <a href="../../../02-algorithm/01-basic/06-backtracking/backtracking.html">
+            
+                    
+                    回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../../02-algorithm/01-basic/07-depth-first-search/dfs.html">
+            
+                <a href="../../../02-algorithm/01-basic/07-depth-first-search/dfs.html">
+            
+                    
+                    深度优先搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../../02-algorithm/01-basic/08-breadth-first-search/bfs.html">
+            
+                <a href="../../../02-algorithm/01-basic/08-breadth-first-search/bfs.html">
+            
+                    
+                    宽度优先搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../../02-algorithm/01-basic/08-greedy/greedy.html">
+            
+                <a href="../../../02-algorithm/01-basic/08-greedy/greedy.html">
+            
+                    
+                    贪心
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" >
+            
+                <span>
+            
+                    
+                    动态规划
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../../02-algorithm/02-advanced/01-dp/01-线性/linear.html">
+            
+                <a href="../../../02-algorithm/02-advanced/01-dp/01-线性/linear.html">
+            
+                    
+                    线性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../../02-algorithm/02-advanced/01-dp/02-区间/interval.html">
+            
+                <a href="../../../02-algorithm/02-advanced/01-dp/02-区间/interval.html">
+            
+                    
+                    区间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" >
+            
+                <span>
+            
+                    
+                    图论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.2.1" data-path="../../../02-algorithm/02-advanced/02-graph/01-connected/connected.html">
+            
+                <a href="../../../02-algorithm/02-advanced/02-graph/01-connected/connected.html">
+            
+                    
+                    连通性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2.2" data-path="../../../02-algorithm/02-advanced/02-graph/02-topological/topological.html">
+            
+                <a href="../../../02-algorithm/02-advanced/02-graph/02-topological/topological.html">
+            
+                    
+                    拓扑排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" >
+            
+                <span>
+            
+                    
+                    字符串
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="../../../02-algorithm/02-advanced/03-string/01-kmp/kmp.html">
+            
+                <a href="../../../02-algorithm/02-advanced/03-string/01-kmp/kmp.html">
+            
+                    
+                    KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.2" data-path="../../../02-algorithm/02-advanced/03-string/02-manacher/manacher.html">
+            
+                <a href="../../../02-algorithm/02-advanced/03-string/02-manacher/manacher.html">
+            
+                    
+                    Manacher
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" >
+            
+                <span>
+            
+                    
+                    数学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.4.1" data-path="../../../02-algorithm/02-advanced/04-math/01-big-num/big-num.html">
+            
+                <a href="../../../02-algorithm/02-advanced/04-math/01-big-num/big-num.html">
+            
+                    
+                    大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.2" data-path="../../../02-algorithm/02-advanced/04-math/02-quick-pow/quick-pow.html">
+            
+                <a href="../../../02-algorithm/02-advanced/04-math/02-quick-pow/quick-pow.html">
+            
+                    
+                    快速幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.3" data-path="../../../02-algorithm/02-advanced/04-math/03-number-theory/number-theory.html">
+            
+                <a href="../../../02-algorithm/02-advanced/04-math/03-number-theory/number-theory.html">
+            
+                    
+                    数论
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >栈和队列</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6808;&#x548C;&#x961F;&#x5217;">&#x6808;&#x548C;&#x961F;&#x5217;</h1>
+<blockquote>
+<p>&#x6808;&#xFF1A;&#x540E;&#x8FDB;&#x5148;&#x51FA;&#xFF1B;&#x961F;&#x5217;&#xFF1A;&#x5148;&#x8FDB;&#x5148;&#x51FA;</p>
+</blockquote>
+<p>&#x5728;&#x4F7F;&#x7528;JDK11&#x76F8;&#x5173;&#x7684;API&#x63A5;&#x53E3;&#x65F6;&#xFF0C;Stack&#x5DF2;&#x7ECF;&#x4E0D;&#x88AB;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x7EE7;&#x627F;&#x81EA;Vector&#xFF0C;&#x662F;JDK1.0&#x7684;&#x4EA7;&#x7269;&#xFF0C;&#x8BBE;&#x8BA1;&#x4E0D;&#x591F;&#x5408;&#x7406;&#x4E14;&#x6027;&#x80FD;&#x4F4E;&#x6548;&#x3002;</p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x6808;&#x548C;&#x961F;&#x5217;&#x65F6;&#xFF0C;&#x4E2A;&#x4EBA;&#x503E;&#x5411;&#x4E8E;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x5F53;&#x4F5C;&#x4E3A;&#x6808;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x6027;&#x80FD;&#x6BD4;Stack&#x597D;&#xFF1B;&#x5F53;&#x4F5C;&#x4E3A;&#x961F;&#x5217;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x6027;&#x80FD;&#x6BD4;LinkedList&#x597D;&#x3002;</span>
+Deque&lt;T&gt; deque = <span class="hljs-keyword">new</span> ArrayDeque&lt;T&gt;();
+
+<span class="hljs-comment">// stack</span>
+deque.push();
+deque.peek();
+deque.pop();
+
+<span class="hljs-comment">// queue</span>
+deque.offer();
+deque.peek();
+deque.pop();
+
+<span class="hljs-comment">// deque</span>
+deque.offerFirst();
+deque.offerLast();
+deque.peekFirst();
+deque.peekLast();
+deque.pollFirst();
+deque.pollLast();
+</code></pre>
+<h2 id="arraydeque">ArrayDeque</h2>
+<h3 id="1-offer">1. offer</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">offer</span><span class="hljs-params">(E e)</span>
+</span></code></pre>
+<ul>
+<li><p><strong>Parameters:</strong></p>
+<p><code>e</code> - the element to add</p>
+</li>
+<li><p><strong>Returns:</strong></p>
+<p><code>true</code> (as specified by <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Queue.html#offer(E" target="_blank"><code>Queue.offer(E)</code></a>))</p>
+</li>
+<li><p><strong>Throws:</strong></p>
+<p><code>NullPointerException</code> - if the specified element is null</p>
+</li>
+</ul>
+<h3 id="2-poll">2. poll</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> E <span class="hljs-title">poll</span><span class="hljs-params">()</span>
+</span></code></pre>
+<ul>
+<li><p><strong>Returns:</strong></p>
+<p>the head of the queue represented by this deque, or <code>null</code> if this deque is empty</p>
+</li>
+</ul>
+<h3 id="3-peek">3. peek</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> E <span class="hljs-title">peek</span><span class="hljs-params">()</span>
+</span></code></pre>
+<ul>
+<li><p><strong>Returns:</strong></p>
+<p>the head of the queue represented by this deque, or <code>null</code> if this deque is empty</p>
+</li>
+</ul>
+<h3 id="4-push">4. push</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">push</span><span class="hljs-params">(E e)</span>
+</span></code></pre>
+<ul>
+<li><p><strong>Parameters:</strong></p>
+<p><code>e</code> - the element to push</p>
+</li>
+<li><p><strong>Throws:</strong></p>
+<p><code>NullPointerException</code> - if the specified element is null</p>
+</li>
+</ul>
+<h3 id="5-pop">5. pop</h3>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">public</span> E <span class="hljs-title">pop</span><span class="hljs-params">()</span>
+</span></code></pre>
+<ul>
+<li><p><strong>Returns:</strong></p>
+<p>the element at the front of this deque (which is the top of the stack represented by this deque)</p>
+</li>
+<li><p><strong>Throws:</strong></p>
+<p><code>NoSuchElementException</code> - if this deque is empty</p>
+</li>
+</ul>
+<h2 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h2>
+<h3 id="225-implement-stack-using-queues">225. implement-stack-using-queues</h3>
+<hr>
+<p><strong>Description:</strong></p>
+<p>Implement the following operations of a stack using queues.</p>
+<ul>
+<li>push(x) -- Push element x onto stack.</li>
+<li>pop() -- Removes the element on top of the stack.</li>
+<li>top() -- Get the top element.</li>
+<li>empty() -- Return whether the stack is empty.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code>MyStack stack = new MyStack();
+
+stack.push(1);
+stack.push(2);  
+stack.top();   // returns 2
+stack.pop();   // returns 2
+stack.empty(); // returns false
+</code></pre><p><strong>Notes:</strong></p>
+<ul>
+<li>You must use <em>only</em> standard operations of a queue -- which means only <code>push to back</code>, <code>peek/pop from front</code>, <code>size</code>, and <code>is empty</code> operations are valid.</li>
+<li>Depending on your language, queue may not be supported natively. You may simulate a queue by using a list or deque (double-ended queue), as long as you use only standard operations of a queue.</li>
+<li>You may assume that all operations are valid (for example, no pop or top operations will be called on an empty stack).</li>
+</ul>
+<p><a href="https://leetcode.com/problems/implement-stack-using-queues/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/implement-stack-using-queues/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.LinkedList;
+<span class="hljs-keyword">import</span> java.util.Queue;
+
+<span class="hljs-comment">/*
+ * @lc app=leetcode id=225 lang=java
+ *
+ * [225] Implement Stack using Queues
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyStack</span> </span>{
+    <span class="hljs-keyword">private</span> Queue&lt;Integer&gt; queue;
+    <span class="hljs-comment">/** Initialize your data structure here. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyStack</span><span class="hljs-params">()</span> </span>{
+        queue = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;();
+    }
+
+    <span class="hljs-comment">/** Push element x onto stack. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">push</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>{
+        queue.offer(x);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; queue.size() - <span class="hljs-number">1</span>; i++) {
+            queue.offer(queue.poll());
+        }
+    }
+
+    <span class="hljs-comment">/** Removes the element on top of the stack and returns that element. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">pop</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> queue.poll();
+    }
+
+    <span class="hljs-comment">/** Get the top element. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">top</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> queue.peek();
+    }
+
+    <span class="hljs-comment">/** Returns whether the stack is empty. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">empty</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> queue.isEmpty();
+    }
+}
+
+<span class="hljs-comment">/**
+ * Your MyStack object will be instantiated and called as such:
+ * MyStack obj = new MyStack();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.top();
+ * boolean param_4 = obj.empty();
+ */</span>
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+<h3 id="232-implement-queue-using-stacks">232. implement-queue-using-stacks</h3>
+<hr>
+<p><strong>Description:</strong></p>
+<p>Implement the following operations of a queue using stacks.</p>
+<ul>
+<li>push(x) -- Push element x to the back of queue.</li>
+<li>pop() -- Removes the element from in front of queue.</li>
+<li>peek() -- Get the front element.</li>
+<li>empty() -- Return whether the queue is empty.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code>MyQueue queue = new MyQueue();
+
+queue.push(1);
+queue.push(2);  
+queue.peek();  // returns 1
+queue.pop();   // returns 1
+queue.empty(); // returns false
+</code></pre><p><strong>Notes:</strong></p>
+<ul>
+<li>You must use <em>only</em> standard operations of a stack -- which means only <code>push to top</code>, <code>peek/pop from top</code>, <code>size</code>, and <code>is empty</code> operations are valid.</li>
+<li>Depending on your language, stack may not be supported natively. You may simulate a stack by using a list or deque (double-ended queue), as long as you use only standard operations of a stack.</li>
+<li>You may assume that all operations are valid (for example, no pop or peek operations will be called on an empty queue).</li>
+</ul>
+<p><a href="https://leetcode.com/problems/implement-queue-using-stacks/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/implement-queue-using-stacks/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.ArrayDeque;
+<span class="hljs-keyword">import</span> java.util.Deque;
+
+<span class="hljs-comment">/*
+ * @lc app=leetcode id=232 lang=java
+ *
+ * [232] Implement Queue using Stacks
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyQueue</span> </span>{
+    <span class="hljs-keyword">private</span> Deque&lt;Integer&gt; stack;
+    <span class="hljs-comment">/** Initialize your data structure here. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyQueue</span><span class="hljs-params">()</span> </span>{
+        stack = <span class="hljs-keyword">new</span> ArrayDeque&lt;&gt;();
+    }
+
+    <span class="hljs-comment">/** Push element x to the back of queue. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">push</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>{
+        Deque&lt;Integer&gt; temp = <span class="hljs-keyword">new</span> ArrayDeque&lt;&gt;();
+        <span class="hljs-keyword">while</span> (!stack.isEmpty()) {
+            temp.push(stack.pop());
+        }
+        stack.push(x);
+        <span class="hljs-keyword">while</span> (!temp.isEmpty()) {
+            stack.push(temp.pop());
+        }
+    }
+
+    <span class="hljs-comment">/** Removes the element from in front of queue and returns that element. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">pop</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> stack.pop();
+    }
+
+    <span class="hljs-comment">/** Get the front element. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">peek</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> stack.peek();
+    }
+
+    <span class="hljs-comment">/** Returns whether the queue is empty. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">empty</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> stack.isEmpty();
+    }
+}
+
+<span class="hljs-comment">/**
+ * Your MyQueue object will be instantiated and called as such:
+ * MyQueue obj = new MyQueue();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.peek();
+ * boolean param_4 = obj.empty();
+ */</span>
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+<h3 id="155-min-stack">155. min-stack</h3>
+<hr>
+<p><strong>Description:</strong></p>
+<p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.</p>
+<ul>
+<li>push(x) -- Push element x onto stack.</li>
+<li>pop() -- Removes the element on top of the stack.</li>
+<li>top() -- Get the top element.</li>
+<li>getMin() -- Retrieve the minimum element in the stack.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code>MinStack minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+minStack.getMin();   --&gt; Returns -3.
+minStack.pop();
+minStack.top();      --&gt; Returns 0.
+minStack.getMin();   --&gt; Returns -2.
+</code></pre><p><a href="https://leetcode.com/problems/min-stack/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/min-stack/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.Deque;
+<span class="hljs-keyword">import</span> java.util.ArrayDeque;
+
+<span class="hljs-comment">/*
+ * @lc app=leetcode id=155 lang=java
+ *
+ * [155] Min Stack
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MinStack</span> </span>{
+    <span class="hljs-keyword">private</span> Deque&lt;Integer&gt; stack;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> minVal;
+    <span class="hljs-comment">/** initialize your data structure here. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MinStack</span><span class="hljs-params">()</span> </span>{
+        stack = <span class="hljs-keyword">new</span> ArrayDeque&lt;&gt;();
+        minVal = Integer.MAX_VALUE;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">push</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>{
+        <span class="hljs-keyword">if</span> (x &lt;= minVal) {
+            stack.push(minVal);
+            minVal = x;
+        }
+        stack.push(x);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">pop</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">if</span> (stack.pop() == minVal) {
+            <span class="hljs-keyword">if</span> (stack.size() &lt;= <span class="hljs-number">1</span>) {
+                minVal = Integer.MAX_VALUE;
+            } <span class="hljs-keyword">else</span> {
+                minVal = stack.pop();
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">top</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> stack.peek();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getMin</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> minVal;
+    }
+}
+
+<span class="hljs-comment">/**
+ * Your MinStack object will be instantiated and called as such:
+ * MinStack obj = new MinStack();
+ * obj.push(x);
+ * obj.pop();
+ * int param_3 = obj.top();
+ * int param_4 = obj.getMin();
+ */</span>
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<p><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ArrayDeque.html" target="_blank">ArrayDeque JDK11</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../02-linkedlist/linkedlist.html" class="navigation navigation-prev " aria-label="Previous page: 链表">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../04-tree/tree.html" class="navigation navigation-next " aria-label="Next page: 树">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"栈和队列","level":"1.2.1.3","depth":3,"next":{"title":"树","level":"1.2.1.4","depth":3,"path":"01-data-structrue/basic/04-tree/tree.md","ref":"01-data-structrue/basic/04-tree/tree.md","articles":[]},"previous":{"title":"链表","level":"1.2.1.2","depth":3,"path":"01-data-structrue/basic/02-linkedlist/linkedlist.md","ref":"01-data-structrue/basic/02-linkedlist/linkedlist.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01-data-structrue/basic/03-stack-queue/stack-queue.md","mtime":"2020-05-18T07:25:42.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-17T08:53:22.954Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

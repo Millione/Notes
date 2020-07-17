@@ -1,0 +1,1234 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>深度优先搜索 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../08-breadth-first-search/bfs.html" />
+    
+    
+    <link rel="prev" href="../06-backtracking/backtracking.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    数据结构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../../01-data-structrue/basic/01-array/array.html">
+            
+                <a href="../../../01-data-structrue/basic/01-array/array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../../01-data-structrue/basic/02-linkedlist/linkedlist.html">
+            
+                <a href="../../../01-data-structrue/basic/02-linkedlist/linkedlist.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../../01-data-structrue/basic/03-stack-queue/stack-queue.html">
+            
+                <a href="../../../01-data-structrue/basic/03-stack-queue/stack-queue.html">
+            
+                    
+                    栈和队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../../01-data-structrue/basic/04-tree/tree.html">
+            
+                <a href="../../../01-data-structrue/basic/04-tree/tree.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../../01-data-structrue/basic/05-set/set.html">
+            
+                <a href="../../../01-data-structrue/basic/05-set/set.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../../../01-data-structrue/basic/06-map/map.html">
+            
+                <a href="../../../01-data-structrue/basic/06-map/map.html">
+            
+                    
+                    哈希表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../../../01-data-structrue/basic/07-heap/heap.html">
+            
+                <a href="../../../01-data-structrue/basic/07-heap/heap.html">
+            
+                    
+                    堆
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../../01-data-structrue/advanced/01-union-find/union-find.html">
+            
+                <a href="../../../01-data-structrue/advanced/01-union-find/union-find.html">
+            
+                    
+                    并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../../01-data-structrue/advanced/02-binary-indexed-tree/binary-indexed-tree.html">
+            
+                <a href="../../../01-data-structrue/advanced/02-binary-indexed-tree/binary-indexed-tree.html">
+            
+                    
+                    树状数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../../01-data-structrue/advanced/03-segment-tree/segment-tree.html">
+            
+                <a href="../../../01-data-structrue/advanced/03-segment-tree/segment-tree.html">
+            
+                    
+                    线段树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../../../01-data-structrue/advanced/04-trie/trie.html">
+            
+                <a href="../../../01-data-structrue/advanced/04-trie/trie.html">
+            
+                    
+                    字典树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../../../01-data-structrue/advanced/05-monotone-stack/monotone-stack.html">
+            
+                <a href="../../../01-data-structrue/advanced/05-monotone-stack/monotone-stack.html">
+            
+                    
+                    单调栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../../../01-data-structrue/advanced/06-monotone-queue/monotone-queue.html">
+            
+                <a href="../../../01-data-structrue/advanced/06-monotone-queue/monotone-queue.html">
+            
+                    
+                    单调队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../01-sort/sort.html">
+            
+                <a href="../01-sort/sort.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../02-binary-search/binary-search.html">
+            
+                <a href="../02-binary-search/binary-search.html">
+            
+                    
+                    二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../03-two-pointer/two-pointer.html">
+            
+                <a href="../03-two-pointer/two-pointer.html">
+            
+                    
+                    双指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../04-sliding-window/sliding-window.html">
+            
+                <a href="../04-sliding-window/sliding-window.html">
+            
+                    
+                    滑动窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../05-divide-and-conquer/divide-and-conquer.html">
+            
+                <a href="../05-divide-and-conquer/divide-and-conquer.html">
+            
+                    
+                    分治
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../06-backtracking/backtracking.html">
+            
+                <a href="../06-backtracking/backtracking.html">
+            
+                    
+                    回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.7" data-path="dfs.html">
+            
+                <a href="dfs.html">
+            
+                    
+                    深度优先搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../08-breadth-first-search/bfs.html">
+            
+                <a href="../08-breadth-first-search/bfs.html">
+            
+                    
+                    宽度优先搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../08-greedy/greedy.html">
+            
+                <a href="../08-greedy/greedy.html">
+            
+                    
+                    贪心
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" >
+            
+                <span>
+            
+                    
+                    动态规划
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../02-advanced/01-dp/01-线性/linear.html">
+            
+                <a href="../../02-advanced/01-dp/01-线性/linear.html">
+            
+                    
+                    线性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../02-advanced/01-dp/02-区间/interval.html">
+            
+                <a href="../../02-advanced/01-dp/02-区间/interval.html">
+            
+                    
+                    区间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" >
+            
+                <span>
+            
+                    
+                    图论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.2.1" data-path="../../02-advanced/02-graph/01-connected/connected.html">
+            
+                <a href="../../02-advanced/02-graph/01-connected/connected.html">
+            
+                    
+                    连通性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2.2" data-path="../../02-advanced/02-graph/02-topological/topological.html">
+            
+                <a href="../../02-advanced/02-graph/02-topological/topological.html">
+            
+                    
+                    拓扑排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" >
+            
+                <span>
+            
+                    
+                    字符串
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="../../02-advanced/03-string/01-kmp/kmp.html">
+            
+                <a href="../../02-advanced/03-string/01-kmp/kmp.html">
+            
+                    
+                    KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.2" data-path="../../02-advanced/03-string/02-manacher/manacher.html">
+            
+                <a href="../../02-advanced/03-string/02-manacher/manacher.html">
+            
+                    
+                    Manacher
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" >
+            
+                <span>
+            
+                    
+                    数学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.4.1" data-path="../../02-advanced/04-math/01-big-num/big-num.html">
+            
+                <a href="../../02-advanced/04-math/01-big-num/big-num.html">
+            
+                    
+                    大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.2" data-path="../../02-advanced/04-math/02-quick-pow/quick-pow.html">
+            
+                <a href="../../02-advanced/04-math/02-quick-pow/quick-pow.html">
+            
+                    
+                    快速幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.3" data-path="../../02-advanced/04-math/03-number-theory/number-theory.html">
+            
+                <a href="../../02-advanced/04-math/03-number-theory/number-theory.html">
+            
+                    
+                    数论
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >深度优先搜索</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;">&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;</h1>
+<blockquote>
+<p>DFS&#xFF08;&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#xFF09; &#x5E38;&#x7528;&#x6765;&#x89E3;&#x51B3;&#x53EF;&#x8FBE;&#x6027;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+</blockquote>
+<p>&#x4E24;&#x4E2A;&#x8981;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x6808;&#xFF1A;&#x7528;&#x6808;&#x6765;&#x4FDD;&#x5B58;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x4FE1;&#x606F;&#xFF0C;&#x5F53;&#x904D;&#x5386;&#x65B0;&#x8282;&#x70B9;&#x8FD4;&#x56DE;&#x65F6;&#x80FD;&#x591F;&#x7EE7;&#x7EED;&#x904D;&#x5386;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x9012;&#x5F52;&#x6808;&#x3002;</li>
+<li>&#x6807;&#x8BB0;&#xFF1A;&#x548C; BFS &#x4E00;&#x6837;&#x540C;&#x6837;&#x9700;&#x8981;&#x5BF9;&#x5DF2;&#x7ECF;&#x904D;&#x5386;&#x8FC7;&#x7684;&#x8282;&#x70B9;&#x8FDB;&#x884C;&#x6807;&#x8BB0;&#x3002;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#x76F8;&#x5E94;&#x9898;&#x76EE;&#x7D22;&#x5F15;(&#x6301;&#x7EED;&#x66F4;&#x65B0;)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://leetcode.com/problems/surrounded-regions" target="_blank">130. Surrounded Regions</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://leetcode.com/problems/number-of-islands" target="_blank">200. Number of Islands</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://leetcode.com/problems/pacific-atlantic-water-flow" target="_blank">417. Pacific Atlantic Water Flow</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://leetcode.com/problems/friend-circles" target="_blank">547. Friend Circles</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://leetcode.com/problems/max-area-of-island" target="_blank">695. Max Area of Island</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x6A21;&#x677F;">&#x6A21;&#x677F;</h2>
+<pre><code class="lang-java"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">()</span>    <span class="hljs-comment">// &#x53C2;&#x6570;&#x7528;&#x6765;&#x8868;&#x793A;&#x72B6;&#x6001;  </span>
+</span>{  
+    <span class="hljs-keyword">if</span>(&#x5230;&#x8FBE;&#x7EC8;&#x70B9;&#x72B6;&#x6001;)  
+    {  
+        ...        <span class="hljs-comment">// &#x6839;&#x636E;&#x9898;&#x610F;&#x6DFB;&#x52A0;  </span>
+        <span class="hljs-keyword">return</span>;  
+    }  
+    <span class="hljs-keyword">if</span>(&#x8D8A;&#x754C;&#x6216;&#x8005;&#x662F;&#x4E0D;&#x5408;&#x6CD5;&#x72B6;&#x6001;)  
+        <span class="hljs-keyword">return</span>;  
+    <span class="hljs-keyword">if</span>(&#x7279;&#x6B8A;&#x72B6;&#x6001;)    <span class="hljs-comment">// &#x526A;&#x679D;</span>
+        <span class="hljs-keyword">return</span> ;
+    <span class="hljs-keyword">for</span>(&#x6269;&#x5C55;&#x65B9;&#x5F0F;)  
+    {  
+        <span class="hljs-keyword">if</span>(&#x6269;&#x5C55;&#x65B9;&#x5F0F;&#x6240;&#x8FBE;&#x5230;&#x72B6;&#x6001;&#x5408;&#x6CD5;)  
+        {  
+            &#x4FEE;&#x6539;&#x64CD;&#x4F5C;;    <span class="hljs-comment">// &#x6839;&#x636E;&#x9898;&#x610F;&#x6765;&#x6DFB;&#x52A0;  </span>
+            &#x6807;&#x8BB0;&#xFF1B;  
+            dfs&#xFF08;&#xFF09;&#xFF1B;  
+            (&#x8FD8;&#x539F;&#x6807;&#x8BB0;)&#xFF1B;  <span class="hljs-comment">// &#x662F;&#x5426;&#x8FD8;&#x539F;&#x6807;&#x8BB0;&#x6839;&#x636E;&#x9898;&#x610F;  </span>
+            <span class="hljs-comment">//&#x5982;&#x679C;&#x52A0;&#x4E0A;&#xFF08;&#x8FD8;&#x539F;&#x6807;&#x8BB0;&#xFF09;&#x5C31;&#x662F; &#x56DE;&#x6EAF;&#x6CD5;  </span>
+        }  
+    }  
+}
+</code></pre>
+<h2 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h2>
+<h4 id="695-max-area-of-island">695. max-area-of-island</h4>
+<hr>
+<p><strong>Description:</strong></p>
+<p>Given a non-empty 2D array <code>grid</code> of 0&apos;s and 1&apos;s, an <strong>island</strong> is a group of <code>1</code>&apos;s (representing land) connected 4-directionally (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.</p>
+<p>Find the maximum area of an island in the given 2D array. (If there is no island, the maximum area is 0.)</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>[[0,0,1,0,0,0,0,1,0,0,0,0,0],
+ [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ [0,1,1,0,1,0,0,0,0,0,0,0,0],
+ [0,1,0,0,1,1,0,0,1,0,1,0,0],
+ [0,1,0,0,1,1,0,0,1,1,1,0,0],
+ [0,0,0,0,0,0,0,0,0,0,1,0,0],
+ [0,0,0,0,0,0,0,1,1,1,0,0,0],
+ [0,0,0,0,0,0,0,1,1,0,0,0,0]]
+</code></pre><p>Given the above grid, return <code>6</code>. Note the answer is not 11, because the island must be connected 4-directionally.</p>
+<p><strong>Example 2:</strong></p>
+<pre><code>[[0,0,0,0,0,0,0,0]]
+</code></pre><p>Given the above grid, return <code>0</code>.</p>
+<p><strong>Note:</strong> The length of each dimension in the given <code>grid</code> does not exceed 50.</p>
+<p><a href="https://leetcode.com/problems/max-area-of-island/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/max-area-of-island/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java">
+<span class="hljs-comment">/*
+ * @lc app=leetcode id=695 lang=java
+ *
+ * [695] Max Area of Island
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[][] dir = {{-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}, {<span class="hljs-number">0</span>, <span class="hljs-number">1</span>}, {<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}, {<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>}};
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> m, n;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxAreaOfIsland</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] grid)</span> </span>{
+        <span class="hljs-keyword">if</span> (grid == <span class="hljs-keyword">null</span> || grid.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        <span class="hljs-keyword">int</span> ans = <span class="hljs-number">0</span>;
+        m = grid.length;
+        n = grid[<span class="hljs-number">0</span>].length;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) {
+                <span class="hljs-keyword">if</span> (grid[i][j] != <span class="hljs-number">0</span>) {
+                    ans = Math.max(ans, dfs(grid, i, j, <span class="hljs-number">1</span>));
+                } 
+            }
+        }
+        <span class="hljs-keyword">return</span> ans;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] grid, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j, <span class="hljs-keyword">int</span> area)</span> </span>{
+        <span class="hljs-keyword">if</span> (i &lt; <span class="hljs-number">0</span> || i &gt;= m || j &lt; <span class="hljs-number">0</span> || j &gt;= n || grid[i][j] == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        grid[i][j] = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] d : dir) {
+            area += dfs(grid, i + d[<span class="hljs-number">0</span>], j + d[<span class="hljs-number">1</span>], <span class="hljs-number">1</span>);
+        }
+        <span class="hljs-keyword">return</span> area;
+    }
+}
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+<h4 id="200-number-of-island">200. number-of-island</h4>
+<hr>
+<p><strong>Description:</strong></p>
+<p>Given a 2d grid map of <code>&apos;1&apos;</code>s (land) and <code>&apos;0&apos;</code>s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input:
+11110
+11010
+11000
+00000
+
+Output: 1
+</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input:
+11000
+11000
+00100
+00011
+
+Output: 3
+</code></pre><p><a href="https://leetcode.com/problems/number-of-islands/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/number-of-islands/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java">
+<span class="hljs-comment">/*
+ * @lc app=leetcode id=200 lang=java
+ *
+ * [200] Number of Islands
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> m, n;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[][] dir = {{-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}, {<span class="hljs-number">0</span>, <span class="hljs-number">1</span>}, {<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}, {<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>}};
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">numIslands</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[][] grid)</span> </span>{
+        <span class="hljs-keyword">if</span> (grid == <span class="hljs-keyword">null</span> || grid.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        m = grid.length;
+        n = grid[<span class="hljs-number">0</span>].length;
+        <span class="hljs-keyword">int</span> res = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) {
+                <span class="hljs-keyword">if</span> (grid[i][j] != <span class="hljs-string">&apos;0&apos;</span>) {
+                    res++;
+                    dfs(grid, i, j);
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> res;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[][] grid, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j)</span> </span>{
+        <span class="hljs-keyword">if</span> (i &lt; <span class="hljs-number">0</span> || i &gt;= m || j &lt; <span class="hljs-number">0</span> || j &gt;= n || grid[i][j] == <span class="hljs-string">&apos;0&apos;</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+        grid[i][j] = <span class="hljs-string">&apos;0&apos;</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] d : dir) {
+            dfs(grid, i + d[<span class="hljs-number">0</span>], j + d[<span class="hljs-number">1</span>]);
+        }
+    }
+}
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+<h4 id="547-friend-circles">547. friend-circles</h4>
+<hr>
+<p><strong>Description:</strong></p>
+<p>There are <strong>N</strong> students in a class. Some of them are friends, while some are not. Their friendship is transitive in nature. For example, if A is a <strong>direct</strong> friend of B, and B is a <strong>direct</strong> friend of C, then A is an <strong>indirect</strong> friend of C. And we defined a friend circle is a group of students who are direct or indirect friends.</p>
+<p>Given a <strong>N*N</strong> matrix <strong>M</strong> representing the friend relationship between students in the class. If M[i][j] = 1, then the ith and jth students are <strong>direct</strong> friends with each other, otherwise not. And you have to output the total number of friend circles among all the students.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: 
+[[1,1,0],
+ [1,1,0],
+ [0,0,1]]
+Output: 2
+Explanation:The 0th and 1st students are direct friends, so they are in a friend circle. The 2nd student himself is in a friend circle. So return 2.
+</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input: 
+[[1,1,0],
+ [1,1,1],
+ [0,1,1]]
+Output: 1
+Explanation:The 0th and 1st students are direct friends, the 1st and 2nd students are direct friends, so the 0th and 2nd students are indirect friends. All of them are in the same friend circle, so return 1.
+</code></pre><p><strong>Note:</strong></p>
+<ol>
+<li>N is in range [1,200].</li>
+<li>M[i][i] = 1 for all students.</li>
+<li>If M[i][j] = 1, then M[j][i] = 1.</li>
+</ol>
+<p><a href="https://leetcode.com/problems/friend-circles/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/friend-circles/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+ * @lc app=leetcode id=547 lang=java
+ *
+ * [547] Friend Circles
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> n;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span>[] visited;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">findCircleNum</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] M)</span> </span>{
+        n = M.length;
+        visited = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[n];
+        <span class="hljs-keyword">int</span> res = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+            <span class="hljs-keyword">if</span> (!visited[i]) {
+                res++;
+                dfs(M, i);
+            }
+        }
+        <span class="hljs-keyword">return</span> res;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] M, <span class="hljs-keyword">int</span> i)</span> </span>{
+        visited[i] = <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) {
+            <span class="hljs-keyword">if</span> (M[i][j] == <span class="hljs-number">1</span> &amp;&amp; !visited[j]) {
+                dfs(M, j);
+            }
+        }
+    }
+}
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+<h4 id="130-surrounded-regions">130. surrounded-regions</h4>
+<hr>
+<p><strong>Description:</strong></p>
+<p>Given a 2D board containing <code>&apos;X&apos;</code> and <code>&apos;O&apos;</code> (<strong>the letter O</strong>), capture all regions surrounded by <code>&apos;X&apos;</code>.</p>
+<p>A region is captured by flipping all <code>&apos;O&apos;</code>s into <code>&apos;X&apos;</code>s in that surrounded region.</p>
+<p><strong>Example:</strong></p>
+<pre><code>X X X X
+X O O X
+X X O X
+X O X X
+</code></pre><p>After running your function, the board should be:</p>
+<pre><code>X X X X
+X X X X
+X X X X
+X O X X
+</code></pre><p><strong>Explanation:</strong></p>
+<p>Surrounded regions shouldn&#x2019;t be on the border, which means that any <code>&apos;O&apos;</code> on the border of the board are not flipped to <code>&apos;X&apos;</code>. Any <code>&apos;O&apos;</code> that is not on the border and it is not connected to an <code>&apos;O&apos;</code> on the border will be flipped to <code>&apos;X&apos;</code>. Two cells are connected if they are adjacent cells connected horizontally or vertically.</p>
+<p><a href="https://leetcode.com/problems/surrounded-regions/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/surrounded-regions/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java">
+<span class="hljs-comment">/*
+ * @lc app=leetcode id=130 lang=java
+ *
+ * [130] Surrounded Regions
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[][] dir = {{<span class="hljs-number">0</span>, <span class="hljs-number">1</span>}, {<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>}, {<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}, {-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}};
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> m, n;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">solve</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[][] board)</span> </span>{
+        <span class="hljs-keyword">if</span> (board == <span class="hljs-keyword">null</span> || board.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+
+        m = board.length;
+        n = board[<span class="hljs-number">0</span>].length;
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++) {
+            dfs(board, i, <span class="hljs-number">0</span>);
+            dfs(board, i, n - <span class="hljs-number">1</span>);
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) {
+            dfs(board, <span class="hljs-number">0</span>, j);
+            dfs(board, m - <span class="hljs-number">1</span>, j);
+        }
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) {
+                <span class="hljs-keyword">if</span> (board[i][j] == <span class="hljs-string">&apos;T&apos;</span>) {
+                    board[i][j] = <span class="hljs-string">&apos;O&apos;</span>;
+                } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (board[i][j] == <span class="hljs-string">&apos;O&apos;</span>) {
+                    board[i][j] = <span class="hljs-string">&apos;X&apos;</span>;
+                }
+            }
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">dfs</span><span class="hljs-params">(<span class="hljs-keyword">char</span>[][] board, <span class="hljs-keyword">int</span> r, <span class="hljs-keyword">int</span> c)</span> </span>{
+        <span class="hljs-keyword">if</span> (r &lt; <span class="hljs-number">0</span> || r &gt;= m || c &lt; <span class="hljs-number">0</span> || c &gt;= n || board[r][c] != <span class="hljs-string">&apos;O&apos;</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+        board[r][c] = <span class="hljs-string">&apos;T&apos;</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] d : dir) {
+            dfs(board, r + d[<span class="hljs-number">0</span>], c + d[<span class="hljs-number">1</span>]);
+        }
+    }
+}
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+<h4 id="417-pacific-atlantic-water-flow">417. pacific-atlantic-water-flow</h4>
+<hr>
+<p><strong>Description:</strong></p>
+<p>Given an <code>m x n</code> matrix of non-negative integers representing the height of each unit cell in a continent, the &quot;Pacific ocean&quot; touches the left and top edges of the matrix and the &quot;Atlantic ocean&quot; touches the right and bottom edges.</p>
+<p>Water can only flow in four directions (up, down, left, or right) from a cell to another one with height equal or lower.</p>
+<p>Find the list of grid coordinates where water can flow to both the Pacific and Atlantic ocean.</p>
+<p><strong>Note:</strong></p>
+<ol>
+<li>The order of returned grid coordinates does not matter.</li>
+<li>Both <em>m</em> and <em>n</em> are less than 150.</li>
+</ol>
+<p><strong>Example:</strong></p>
+<pre><code>Given the following 5x5 matrix:
+
+  Pacific ~   ~   ~   ~   ~ 
+       ~  1   2   2   3  (5) *
+       ~  3   2   3  (4) (4) *
+       ~  2   4  (5)  3   1  *
+       ~ (6) (7)  1   4   5  *
+       ~ (5)  1   1   2   4  *
+          *   *   *   *   * Atlantic
+
+Return:
+
+[[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]] (positions with parentheses in above matrix).
+</code></pre><p><a href="https://leetcode.com/problems/pacific-atlantic-water-flow/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/pacific-atlantic-water-flow/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java">
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.Arrays;
+<span class="hljs-keyword">import</span> java.util.List;
+
+<span class="hljs-comment">/*
+ * @lc app=leetcode id=417 lang=java
+ *
+ * [417] Pacific Atlantic Water Flow
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[][] matrix;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> m, n;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[][] dir = {{<span class="hljs-number">0</span>, <span class="hljs-number">1</span>}, {<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>}, {<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}, {-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}};
+
+    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; pacificAtlantic (<span class="hljs-keyword">int</span>[][] matrix) {
+        List&lt;List&lt;Integer&gt;&gt; res = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">if</span> (matrix == <span class="hljs-keyword">null</span> || matrix.length == <span class="hljs-number">0</span>) {
+            <span class="hljs-keyword">return</span> res;
+        }
+        m = matrix.length;
+        n = matrix[<span class="hljs-number">0</span>].length;
+        <span class="hljs-keyword">this</span>.matrix = matrix;
+        <span class="hljs-keyword">boolean</span>[][] canReachP = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[m][n];
+        <span class="hljs-keyword">boolean</span>[][] canReachA = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[m][n];
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++) {
+            dfs(i, <span class="hljs-number">0</span>, canReachP);
+            dfs(i, n - <span class="hljs-number">1</span>, canReachA);
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) {
+            dfs(<span class="hljs-number">0</span>, j, canReachP);
+            dfs(m - <span class="hljs-number">1</span>, j, canReachA);
+        }
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; m; i++) {
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; n; j++) {
+                <span class="hljs-keyword">if</span> (canReachA[i][j] &amp;&amp; canReachP[i][j]) {
+                    res.add(Arrays.asList(i, j));
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> res;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">dfs</span> <span class="hljs-params">(<span class="hljs-keyword">int</span> r, <span class="hljs-keyword">int</span> c, <span class="hljs-keyword">boolean</span>[][] canReach)</span> </span>{
+        <span class="hljs-keyword">if</span> (canReach[r][c]) {
+            <span class="hljs-keyword">return</span>;
+        }
+        canReach[r][c] = <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] d : dir) {
+            <span class="hljs-keyword">int</span> nextRow = r + d[<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">int</span> nextCol = c + d[<span class="hljs-number">1</span>];
+            <span class="hljs-keyword">if</span> (nextRow &lt; <span class="hljs-number">0</span> || nextRow &gt;= m || nextCol &lt; <span class="hljs-number">0</span> || nextCol &gt;= n
+                    || matrix[r][c] &gt; matrix[nextRow][nextCol]) {
+                <span class="hljs-keyword">continue</span>;
+            }
+            dfs(nextRow, nextCol, canReach);
+        }
+    }
+}
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../06-backtracking/backtracking.html" class="navigation navigation-prev " aria-label="Previous page: 回溯">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../08-breadth-first-search/bfs.html" class="navigation navigation-next " aria-label="Next page: 宽度优先搜索">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"深度优先搜索","level":"1.3.1.7","depth":3,"next":{"title":"宽度优先搜索","level":"1.3.1.8","depth":3,"path":"02-algorithm/01-basic/08-breadth-first-search/bfs.md","ref":"02-algorithm/01-basic/08-breadth-first-search/bfs.md","articles":[]},"previous":{"title":"回溯","level":"1.3.1.6","depth":3,"path":"02-algorithm/01-basic/06-backtracking/backtracking.md","ref":"02-algorithm/01-basic/06-backtracking/backtracking.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02-algorithm/01-basic/07-depth-first-search/dfs.md","mtime":"2020-05-18T09:23:27.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-17T08:53:22.954Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1048 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>字典树 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../05-monotone-stack/monotone-stack.html" />
+    
+    
+    <link rel="prev" href="../03-segment-tree/segment-tree.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    数据结构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../basic/01-array/array.html">
+            
+                <a href="../../basic/01-array/array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../basic/02-linkedlist/linkedlist.html">
+            
+                <a href="../../basic/02-linkedlist/linkedlist.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../basic/03-stack-queue/stack-queue.html">
+            
+                <a href="../../basic/03-stack-queue/stack-queue.html">
+            
+                    
+                    栈和队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../basic/04-tree/tree.html">
+            
+                <a href="../../basic/04-tree/tree.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../basic/05-set/set.html">
+            
+                <a href="../../basic/05-set/set.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../../basic/06-map/map.html">
+            
+                <a href="../../basic/06-map/map.html">
+            
+                    
+                    哈希表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../../basic/07-heap/heap.html">
+            
+                <a href="../../basic/07-heap/heap.html">
+            
+                    
+                    堆
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../01-union-find/union-find.html">
+            
+                <a href="../01-union-find/union-find.html">
+            
+                    
+                    并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../02-binary-indexed-tree/binary-indexed-tree.html">
+            
+                <a href="../02-binary-indexed-tree/binary-indexed-tree.html">
+            
+                    
+                    树状数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../03-segment-tree/segment-tree.html">
+            
+                <a href="../03-segment-tree/segment-tree.html">
+            
+                    
+                    线段树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2.4" data-path="trie.html">
+            
+                <a href="trie.html">
+            
+                    
+                    字典树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../05-monotone-stack/monotone-stack.html">
+            
+                <a href="../05-monotone-stack/monotone-stack.html">
+            
+                    
+                    单调栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../06-monotone-queue/monotone-queue.html">
+            
+                <a href="../06-monotone-queue/monotone-queue.html">
+            
+                    
+                    单调队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../02-algorithm/01-basic/01-sort/sort.html">
+            
+                <a href="../../../02-algorithm/01-basic/01-sort/sort.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../../02-algorithm/01-basic/02-binary-search/binary-search.html">
+            
+                <a href="../../../02-algorithm/01-basic/02-binary-search/binary-search.html">
+            
+                    
+                    二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../../02-algorithm/01-basic/03-two-pointer/two-pointer.html">
+            
+                <a href="../../../02-algorithm/01-basic/03-two-pointer/two-pointer.html">
+            
+                    
+                    双指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../../02-algorithm/01-basic/04-sliding-window/sliding-window.html">
+            
+                <a href="../../../02-algorithm/01-basic/04-sliding-window/sliding-window.html">
+            
+                    
+                    滑动窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../../02-algorithm/01-basic/05-divide-and-conquer/divide-and-conquer.html">
+            
+                <a href="../../../02-algorithm/01-basic/05-divide-and-conquer/divide-and-conquer.html">
+            
+                    
+                    分治
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../../02-algorithm/01-basic/06-backtracking/backtracking.html">
+            
+                <a href="../../../02-algorithm/01-basic/06-backtracking/backtracking.html">
+            
+                    
+                    回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../../02-algorithm/01-basic/07-depth-first-search/dfs.html">
+            
+                <a href="../../../02-algorithm/01-basic/07-depth-first-search/dfs.html">
+            
+                    
+                    深度优先搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../../02-algorithm/01-basic/08-breadth-first-search/bfs.html">
+            
+                <a href="../../../02-algorithm/01-basic/08-breadth-first-search/bfs.html">
+            
+                    
+                    宽度优先搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../../02-algorithm/01-basic/08-greedy/greedy.html">
+            
+                <a href="../../../02-algorithm/01-basic/08-greedy/greedy.html">
+            
+                    
+                    贪心
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" >
+            
+                <span>
+            
+                    
+                    动态规划
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../../02-algorithm/02-advanced/01-dp/01-线性/linear.html">
+            
+                <a href="../../../02-algorithm/02-advanced/01-dp/01-线性/linear.html">
+            
+                    
+                    线性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../../02-algorithm/02-advanced/01-dp/02-区间/interval.html">
+            
+                <a href="../../../02-algorithm/02-advanced/01-dp/02-区间/interval.html">
+            
+                    
+                    区间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" >
+            
+                <span>
+            
+                    
+                    图论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.2.1" data-path="../../../02-algorithm/02-advanced/02-graph/01-connected/connected.html">
+            
+                <a href="../../../02-algorithm/02-advanced/02-graph/01-connected/connected.html">
+            
+                    
+                    连通性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2.2" data-path="../../../02-algorithm/02-advanced/02-graph/02-topological/topological.html">
+            
+                <a href="../../../02-algorithm/02-advanced/02-graph/02-topological/topological.html">
+            
+                    
+                    拓扑排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" >
+            
+                <span>
+            
+                    
+                    字符串
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="../../../02-algorithm/02-advanced/03-string/01-kmp/kmp.html">
+            
+                <a href="../../../02-algorithm/02-advanced/03-string/01-kmp/kmp.html">
+            
+                    
+                    KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.2" data-path="../../../02-algorithm/02-advanced/03-string/02-manacher/manacher.html">
+            
+                <a href="../../../02-algorithm/02-advanced/03-string/02-manacher/manacher.html">
+            
+                    
+                    Manacher
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" >
+            
+                <span>
+            
+                    
+                    数学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.4.1" data-path="../../../02-algorithm/02-advanced/04-math/01-big-num/big-num.html">
+            
+                <a href="../../../02-algorithm/02-advanced/04-math/01-big-num/big-num.html">
+            
+                    
+                    大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.2" data-path="../../../02-algorithm/02-advanced/04-math/02-quick-pow/quick-pow.html">
+            
+                <a href="../../../02-algorithm/02-advanced/04-math/02-quick-pow/quick-pow.html">
+            
+                    
+                    快速幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.3" data-path="../../../02-algorithm/02-advanced/04-math/03-number-theory/number-theory.html">
+            
+                <a href="../../../02-algorithm/02-advanced/04-math/03-number-theory/number-theory.html">
+            
+                    
+                    数论
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >字典树</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5B57;&#x5178;&#x6811;">&#x5B57;&#x5178;&#x6811;</h1>
+<p>&#x5B57;&#x5178;&#x6811;&#xFF0C;&#x53C8;&#x79F0;&#x5355;&#x8BCD;&#x67E5;&#x627E;&#x6811;&#xFF0C;Trie&#x6811;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x6811;&#x5F62;&#x7ED3;&#x6784;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x54C8;&#x5E0C;&#x6811;&#x7684;&#x53D8;&#x79CD;&#x3002;&#x5178;&#x578B;&#x5E94;&#x7528;&#x662F;&#x7528;&#x4E8E;<strong>&#x7EDF;&#x8BA1;&#xFF0C;&#x6392;&#x5E8F;&#x548C;&#x4FDD;&#x5B58;&#x5927;&#x91CF;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x4F46;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E;&#x5B57;&#x7B26;&#x4E32;&#xFF09;</strong>&#xFF0C;&#x6240;&#x4EE5;&#x7ECF;&#x5E38;&#x88AB;&#x641C;&#x7D22;&#x5F15;&#x64CE;&#x7CFB;&#x7EDF;&#x7528;&#x4E8E;&#x6587;&#x672C;&#x8BCD;&#x9891;&#x7EDF;&#x8BA1;&#x3002;&#x5B83;&#x7684;&#x4F18;&#x70B9;&#x662F;&#xFF1A;&#x5229;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x516C;&#x5171;&#x524D;&#x7F00;&#x6765;&#x8282;&#x7EA6;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x6700;&#x5927;&#x9650;&#x5EA6;&#x5730;&#x51CF;&#x5C11;&#x65E0;&#x8C13;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6BD4;&#x8F83;&#xFF0C;&#x67E5;&#x8BE2;&#x6548;&#x7387;&#x6BD4;&#x54C8;&#x5E0C;&#x8868;&#x9AD8;&#x3002;</p>
+<p><img src="assets/trie1.png" alt="trie"></p>
+<p><strong>&#x5B57;&#x5178;&#x6811;&#x7684;&#x6027;&#x8D28;</strong></p>
+<ol>
+<li>&#x6839;&#x8282;&#x70B9;&#xFF08;Root&#xFF09;&#x4E0D;&#x5305;&#x542B;&#x5B57;&#x7B26;&#xFF0C;&#x9664;&#x6839;&#x8282;&#x70B9;&#x5916;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x4EC5;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF1B;</li>
+<li>&#x4ECE;&#x6839;&#x8282;&#x70B9;&#x5230;&#x67D0;&#x4E00;&#x8282;&#x70B9;&#x8DEF;&#x5F84;&#x4E0A;&#x6240;&#x7ECF;&#x8FC7;&#x7684;&#x5B57;&#x7B26;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#xFF0C;&#x5373;&#x4E3A;&#x8BE5;&#x8282;&#x70B9;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF1B;</li>
+<li>&#x4EFB;&#x610F;&#x8282;&#x70B9;&#x7684;&#x6240;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x6240;&#x5305;&#x542B;&#x7684;&#x5B57;&#x7B26;&#x90FD;&#x4E0D;&#x76F8;&#x540C;&#xFF1B;</li>
+</ol>
+<p><strong>Trie &#x7684;&#x5E94;&#x7528;</strong></p>
+<ul>
+<li><strong>&#x5B57;&#x7B26;&#x4E32;&#x68C0;&#x7D22;</strong>&#xFF1A;&#x4E8B;&#x5148;&#x5C06;&#x5DF2;&#x77E5;&#x7684;&#x4E00;&#x4E9B;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x5B57;&#x5178;&#xFF09;&#x7684;&#x6709;&#x5173;&#x4FE1;&#x606F;&#x4FDD;&#x5B58;&#x5230; Trie &#x91CC;&#xFF0C;&#x67E5;&#x627E;&#x53E6;&#x5916;&#x4E00;&#x4E9B;&#x672A;&#x77E5;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x51FA;&#x73B0;&#x8FC7;&#x6216;&#x8005;&#x51FA;&#x73B0;&#x9891;&#x7387;&#x3002;</li>
+<li><strong>&#x5B57;&#x7B26;&#x4E32;&#x6700;&#x957F;&#x516C;&#x5171;&#x524D;&#x7F00;</strong>&#xFF1A;Trie &#x5229;&#x7528;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x516C;&#x5171;&#x524D;&#x7F00;&#x6765;&#x8282;&#x7701;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#xFF0C;&#x53CD;&#x4E4B;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x628A;&#x5927;&#x91CF;&#x5B57;&#x7B26;&#x4E32;&#x5B58;&#x50A8;&#x5230;&#x4E00;&#x68F5; Trie &#x4E0A;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x5F97;&#x5230;&#x67D0;&#x4E9B;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x516C;&#x5171;&#x524D;&#x7F00;&#x3002;</li>
+<li><strong>&#x6392;&#x5E8F;</strong>&#xFF1A;Trie &#x6811;&#x662F;&#x4E00;&#x68F5;&#x591A;&#x53C9;&#x6811;&#xFF0C;&#x53EA;&#x8981;&#x5148;&#x5E8F;&#x904D;&#x5386;&#x6574;&#x68F5;&#x6811;&#xFF0C;&#x8F93;&#x51FA;&#x76F8;&#x5E94;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4FBF;&#x662F;&#x6309;&#x5B57;&#x5178;&#x5E8F;&#x6392;&#x5E8F;&#x7684;&#x7ED3;&#x679C;&#x3002;</li>
+<li><strong>&#x4F5C;&#x4E3A;&#x5176;&#x4ED6;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x548C;&#x7B97;&#x6CD5;&#x7684;&#x8F85;&#x52A9;&#x7ED3;&#x6784;</strong>&#xFF1A;&#x5982;&#x540E;&#x7F00;&#x6811;&#xFF0C;AC&#x81EA;&#x52A8;&#x673A;&#x7B49;&#x3002;</li>
+</ul>
+<h2 id="&#x6A21;&#x677F;">&#x6A21;&#x677F;</h2>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Trie</span> </span>{
+
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MAX = <span class="hljs-number">26</span>;
+
+    <span class="hljs-keyword">private</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TrieNode</span> </span>{
+        <span class="hljs-keyword">int</span> path;
+        <span class="hljs-keyword">int</span> end;
+        TrieNode[] next;
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TrieNode</span><span class="hljs-params">()</span> </span>{
+            path = <span class="hljs-number">0</span>;
+            end = <span class="hljs-number">0</span>;
+            next = <span class="hljs-keyword">new</span> TrieNode[MAX];
+        }
+    }
+
+    <span class="hljs-keyword">private</span> TrieNode root;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Trie</span><span class="hljs-params">()</span> </span>{
+        root = <span class="hljs-keyword">new</span> TrieNode();
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(String word)</span> </span>{
+        <span class="hljs-keyword">if</span> (word == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+        TrieNode cur = root;
+        <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; word.length(); i++) {
+            index = word.charAt(i) - <span class="hljs-string">&apos;a&apos;</span>;
+            <span class="hljs-keyword">if</span> (cur.next[index] == <span class="hljs-keyword">null</span>) {
+                cur.next[index] = <span class="hljs-keyword">new</span> TrieNode();
+            }
+            cur = cur.next[index];
+            cur.path++;
+        }
+        cur.end++;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">count</span><span class="hljs-params">(String word)</span> </span>{
+        <span class="hljs-keyword">if</span> (word == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        TrieNode cur = root;
+        <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; word.length(); i++) {
+            index = word.charAt(i) - <span class="hljs-string">&apos;a&apos;</span>;
+            <span class="hljs-keyword">if</span> (cur.next[index] == <span class="hljs-keyword">null</span>) {
+                <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+            }
+            cur = cur.next[index];
+        }
+        <span class="hljs-keyword">return</span> cur.end;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">search</span><span class="hljs-params">(String word)</span> </span>{
+        <span class="hljs-keyword">return</span> count(word) &gt; <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">prefixNum</span><span class="hljs-params">(String prefix)</span> </span>{
+        <span class="hljs-keyword">if</span> (prefix == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        TrieNode cur = root;
+        <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; prefix.length(); i++) {
+            index = prefix.charAt(i) - <span class="hljs-string">&apos;a&apos;</span>;
+            <span class="hljs-keyword">if</span> (cur.next[index] == <span class="hljs-keyword">null</span>) {
+                <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+            }
+            cur = cur.next[index];
+        }
+        <span class="hljs-keyword">return</span> cur.path;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">startsWith</span><span class="hljs-params">(String prefix)</span> </span>{
+        <span class="hljs-keyword">return</span> prefixNum(prefix) &gt; <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">remove</span><span class="hljs-params">(String word)</span> </span>{
+        <span class="hljs-keyword">if</span> (word == <span class="hljs-keyword">null</span> || !search(word)) {
+            <span class="hljs-keyword">return</span>;
+        }
+        TrieNode cur = root;
+        <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; word.length(); i++) {
+            index = word.charAt(i) - <span class="hljs-string">&apos;a&apos;</span>;
+            <span class="hljs-keyword">if</span> (--cur.next[index].path == <span class="hljs-number">0</span>) {
+                cur.next[index] = <span class="hljs-keyword">null</span>;
+                <span class="hljs-keyword">return</span>;
+            }
+            cur = cur.next[index];
+        }
+        cur.end--;
+    }
+
+}
+</code></pre>
+<h2 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h2>
+<h3 id="208-implement-trie-prefix-tree">208. implement-trie-prefix-tree</h3>
+<hr>
+<p><strong>Description:</strong></p>
+<p>Implement a trie with <code>insert</code>, <code>search</code>, and <code>startsWith</code> methods.</p>
+<p><strong>Example:</strong></p>
+<pre><code>Trie trie = new Trie();
+
+trie.insert(&quot;apple&quot;);
+trie.search(&quot;apple&quot;);   // returns true
+trie.search(&quot;app&quot;);     // returns false
+trie.startsWith(&quot;app&quot;); // returns true
+trie.insert(&quot;app&quot;);   
+trie.search(&quot;app&quot;);     // returns true
+</code></pre><p><strong>Note:</strong></p>
+<ul>
+<li>You may assume that all inputs are consist of lowercase letters <code>a-z</code>.</li>
+<li>All inputs are guaranteed to be non-empty strings.</li>
+</ul>
+<p><a href="https://leetcode.com/problems/implement-trie-prefix-tree/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/implement-trie-prefix-tree/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+ * @lc app=leetcode id=208 lang=java
+ *
+ * [208] Implement Trie (Prefix Tree)
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Trie</span> </span>{
+
+    <span class="hljs-keyword">private</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TrieNode</span> </span>{
+        <span class="hljs-keyword">int</span> path;
+        <span class="hljs-keyword">int</span> end;
+        TrieNode[] next;
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">TrieNode</span><span class="hljs-params">()</span> </span>{
+            path = <span class="hljs-number">0</span>;
+            end = <span class="hljs-number">0</span>;
+            next = <span class="hljs-keyword">new</span> TrieNode[<span class="hljs-number">26</span>];
+        }
+    }
+
+    <span class="hljs-keyword">private</span> TrieNode root;
+
+    <span class="hljs-comment">/** Initialize your data structure here. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Trie</span><span class="hljs-params">()</span> </span>{
+        root = <span class="hljs-keyword">new</span> TrieNode();
+    }
+
+    <span class="hljs-comment">/** Inserts a word into the trie. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">insert</span><span class="hljs-params">(String word)</span> </span>{
+        <span class="hljs-keyword">if</span> (word == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span>;
+        }
+        TrieNode cur = root;
+        <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; word.length();  i++) {
+            index = word.charAt(i) - <span class="hljs-string">&apos;a&apos;</span>;
+            <span class="hljs-keyword">if</span> (cur.next[index] == <span class="hljs-keyword">null</span>) {
+                cur.next[index] = <span class="hljs-keyword">new</span> TrieNode();
+            }
+            cur = cur.next[index];
+            cur.path++;
+        }
+        cur.end++;
+    }
+
+    <span class="hljs-comment">/** Returns if the word is in the trie. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">search</span><span class="hljs-params">(String word)</span> </span>{
+        <span class="hljs-keyword">if</span> (word == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+        TrieNode cur = root;
+        <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; word.length();  i++) {
+            index = word.charAt(i) - <span class="hljs-string">&apos;a&apos;</span>;
+            <span class="hljs-keyword">if</span> (cur.next[index] == <span class="hljs-keyword">null</span>) {
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+            }
+            cur = cur.next[index];
+        }
+        <span class="hljs-keyword">return</span> cur.end &gt; <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-comment">/** Returns if there is any word in the trie that starts with the given prefix. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">startsWith</span><span class="hljs-params">(String prefix)</span> </span>{
+        <span class="hljs-keyword">if</span> (prefix == <span class="hljs-keyword">null</span>) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+        TrieNode cur = root;
+        <span class="hljs-keyword">int</span> index = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; prefix.length();  i++) {
+            index = prefix.charAt(i) - <span class="hljs-string">&apos;a&apos;</span>;
+            <span class="hljs-keyword">if</span> (cur.next[index] == <span class="hljs-keyword">null</span>) {
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+            }
+            cur = cur.next[index];
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+}
+
+<span class="hljs-comment">/**
+ * Your Trie object will be instantiated and called as such:
+ * Trie obj = new Trie();
+ * obj.insert(word);
+ * boolean param_2 = obj.search(word);
+ * boolean param_3 = obj.startsWith(prefix);
+ */</span>
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../03-segment-tree/segment-tree.html" class="navigation navigation-prev " aria-label="Previous page: 线段树">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../05-monotone-stack/monotone-stack.html" class="navigation navigation-next " aria-label="Next page: 单调栈">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"字典树","level":"1.2.2.4","depth":3,"next":{"title":"单调栈","level":"1.2.2.5","depth":3,"path":"01-data-structrue/advanced/05-monotone-stack/monotone-stack.md","ref":"01-data-structrue/advanced/05-monotone-stack/monotone-stack.md","articles":[]},"previous":{"title":"线段树","level":"1.2.2.3","depth":3,"path":"01-data-structrue/advanced/03-segment-tree/segment-tree.md","ref":"01-data-structrue/advanced/03-segment-tree/segment-tree.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01-data-structrue/advanced/04-trie/trie.md","mtime":"2020-07-09T12:11:28.091Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-17T08:53:22.954Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

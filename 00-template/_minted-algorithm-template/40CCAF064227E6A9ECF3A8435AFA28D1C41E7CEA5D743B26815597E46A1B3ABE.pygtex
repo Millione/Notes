@@ -1,0 +1,76 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/*****************数组*****************/}
+
+\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n+nf}{insertionSort}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{arr}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{k}{if} \PYG{o}{(}\PYG{n}{arr} \PYG{o}{==} \PYG{k+kc}{null} \PYG{o}{||} \PYG{n}{arr}\PYG{o}{.}\PYG{n+na}{length} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{arr}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k+kt}{int} \PYG{n}{n} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{;}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{o}{;} \PYG{o}{++}\PYG{n}{i}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{val} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{[}\PYG{n}{i}\PYG{o}{],} \PYG{n}{j} \PYG{o}{=} \PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{;}
+        \PYG{c+c1}{// 查找插入位置}
+        \PYG{k}{for} \PYG{o}{(;} \PYG{n}{j} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mi}{0} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{arr}\PYG{o}{[}\PYG{n}{j}\PYG{o}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{val}\PYG{o}{;} \PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{n}{j}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{c+c1}{// 数据移动}
+        	\PYG{n}{arr}\PYG{o}{[}\PYG{n}{j} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{]} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{[}\PYG{n}{j}\PYG{o}{];}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{n}{arr}\PYG{o}{[}\PYG{n}{j} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{]} \PYG{o}{=} \PYG{n}{val}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{n}{arr}\PYG{o}{;}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{c+cm}{/**************二分插入排序*************/}
+
+\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n+nf}{insertionSort}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{arr}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{k}{if} \PYG{o}{(}\PYG{n}{arr} \PYG{o}{==} \PYG{k+kc}{null} \PYG{o}{||} \PYG{n}{arr}\PYG{o}{.}\PYG{n+na}{length} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{arr}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k+kt}{int} \PYG{n}{n} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{.}\PYG{n+na}{length}\PYG{o}{;}
+    \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{n}\PYG{o}{;} \PYG{o}{++}\PYG{n}{i}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{l} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{,} \PYG{n}{r} \PYG{o}{=} \PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{;}
+        \PYG{k+kt}{int} \PYG{n}{val} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{[}\PYG{n}{i}\PYG{o}{];}
+        \PYG{c+c1}{// 找第一个大于val的位置}
+		\PYG{k}{while} \PYG{o}{(}\PYG{n}{l} \PYG{o}{\PYGZlt{}=} \PYG{n}{r}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{k+kt}{int} \PYG{n}{mid} \PYG{o}{=} \PYG{n}{l} \PYG{o}{+} \PYG{o}{(}\PYG{n}{r} \PYG{o}{\PYGZhy{}} \PYG{n}{l}\PYG{o}{)} \PYG{o}{/} \PYG{l+m+mi}{2}\PYG{o}{;}
+            \PYG{k}{if} \PYG{o}{(}\PYG{n}{arr}\PYG{o}{[}\PYG{n}{mid}\PYG{o}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{val}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{r} \PYG{o}{=} \PYG{n}{mid} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}} \PYG{k}{else} \PYG{o}{\PYGZob{}}
+                \PYG{n}{l} \PYG{o}{=} \PYG{n}{mid} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{j} \PYG{o}{=} \PYG{n}{i} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{;} \PYG{n}{j} \PYG{o}{\PYGZgt{}=} \PYG{n}{l}\PYG{o}{;} \PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{n}{j}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{c+c1}{// 数据移动}
+        	\PYG{n}{arr}\PYG{o}{[}\PYG{n}{j} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{]} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{[}\PYG{n}{j}\PYG{o}{];}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{n}{arr}\PYG{o}{[}\PYG{n}{l}\PYG{o}{]} \PYG{o}{=} \PYG{n}{val}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{n}{arr}\PYG{o}{;}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{c+cm}{/*****************链表*****************/}
+
+\PYG{n}{ListNode} \PYG{n+nf}{insertionSort}\PYG{o}{(}\PYG{n}{ListNode} \PYG{n}{head}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{k}{if} \PYG{o}{(}\PYG{n}{head} \PYG{o}{==} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n}{head}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{n}{ListNode} \PYG{n}{helper} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ListNode}\PYG{o}{(}\PYG{l+m+mi}{0}\PYG{o}{);}
+    \PYG{c+c1}{// 当前要被插入的结点}
+    \PYG{n}{ListNode} \PYG{n}{cur} \PYG{o}{=} \PYG{n}{head}\PYG{o}{;}
+    \PYG{c+c1}{// 插入位置在pre和pre.next之间}
+    \PYG{n}{ListNode} \PYG{n}{pre} \PYG{o}{=} \PYG{n}{helper}\PYG{o}{;}
+    \PYG{c+c1}{// 下一个要插入的结点}
+    \PYG{n}{ListNode} \PYG{n}{next} \PYG{o}{=} \PYG{k+kc}{null}\PYG{o}{;}
+    \PYG{k}{while} \PYG{o}{(}\PYG{n}{cur} \PYG{o}{!=} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{n}{next} \PYG{o}{=} \PYG{n}{cur}\PYG{o}{.}\PYG{n+na}{next}\PYG{o}{;}
+        \PYG{c+c1}{// 找到正确插入的位置}
+        \PYG{k}{while} \PYG{o}{(}\PYG{n}{pre}\PYG{o}{.}\PYG{n+na}{next} \PYG{o}{!=} \PYG{k+kc}{null} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{cur}\PYG{o}{.}\PYG{n+na}{val} \PYG{o}{\PYGZgt{}=} \PYG{n}{pre}\PYG{o}{.}\PYG{n+na}{next}\PYG{o}{.}\PYG{n+na}{val}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{n}{pre} \PYG{o}{=} \PYG{n}{pre}\PYG{o}{.}\PYG{n+na}{next}\PYG{o}{;}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{c+c1}{// 插入操作}
+        \PYG{n}{cur}\PYG{o}{.}\PYG{n+na}{next} \PYG{o}{=} \PYG{n}{pre}\PYG{o}{.}\PYG{n+na}{next}\PYG{o}{;}
+        \PYG{n}{pre}\PYG{o}{.}\PYG{n+na}{next} \PYG{o}{=} \PYG{n}{cur}\PYG{o}{;}
+        \PYG{n}{pre} \PYG{o}{=} \PYG{n}{helper}\PYG{o}{;}
+        \PYG{n}{cur} \PYG{o}{=} \PYG{n}{next}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{n}{helper}\PYG{o}{.}\PYG{n+na}{next}\PYG{o}{;}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

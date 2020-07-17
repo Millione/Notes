@@ -1,0 +1,1129 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>并查集 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../02-binary-indexed-tree/binary-indexed-tree.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    数据结构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../basic/01-array/array.html">
+            
+                <a href="../../basic/01-array/array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../basic/02-linkedlist/linkedlist.html">
+            
+                <a href="../../basic/02-linkedlist/linkedlist.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../basic/03-stack-queue/stack-queue.html">
+            
+                <a href="../../basic/03-stack-queue/stack-queue.html">
+            
+                    
+                    栈和队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../basic/04-tree/tree.html">
+            
+                <a href="../../basic/04-tree/tree.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../basic/05-set/set.html">
+            
+                <a href="../../basic/05-set/set.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../../basic/06-map/map.html">
+            
+                <a href="../../basic/06-map/map.html">
+            
+                    
+                    哈希表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../../basic/07-heap/heap.html">
+            
+                <a href="../../basic/07-heap/heap.html">
+            
+                    
+                    堆
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.2.1" data-path="union-find.html">
+            
+                <a href="union-find.html">
+            
+                    
+                    并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../02-binary-indexed-tree/binary-indexed-tree.html">
+            
+                <a href="../02-binary-indexed-tree/binary-indexed-tree.html">
+            
+                    
+                    树状数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../03-segment-tree/segment-tree.html">
+            
+                <a href="../03-segment-tree/segment-tree.html">
+            
+                    
+                    线段树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../04-trie/trie.html">
+            
+                <a href="../04-trie/trie.html">
+            
+                    
+                    字典树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../05-monotone-stack/monotone-stack.html">
+            
+                <a href="../05-monotone-stack/monotone-stack.html">
+            
+                    
+                    单调栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../06-monotone-queue/monotone-queue.html">
+            
+                <a href="../06-monotone-queue/monotone-queue.html">
+            
+                    
+                    单调队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../../../02-algorithm/01-basic/01-sort/sort.html">
+            
+                <a href="../../../02-algorithm/01-basic/01-sort/sort.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../../../02-algorithm/01-basic/02-binary-search/binary-search.html">
+            
+                <a href="../../../02-algorithm/01-basic/02-binary-search/binary-search.html">
+            
+                    
+                    二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../../../02-algorithm/01-basic/03-two-pointer/two-pointer.html">
+            
+                <a href="../../../02-algorithm/01-basic/03-two-pointer/two-pointer.html">
+            
+                    
+                    双指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../../../02-algorithm/01-basic/04-sliding-window/sliding-window.html">
+            
+                <a href="../../../02-algorithm/01-basic/04-sliding-window/sliding-window.html">
+            
+                    
+                    滑动窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../../../02-algorithm/01-basic/05-divide-and-conquer/divide-and-conquer.html">
+            
+                <a href="../../../02-algorithm/01-basic/05-divide-and-conquer/divide-and-conquer.html">
+            
+                    
+                    分治
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../../../02-algorithm/01-basic/06-backtracking/backtracking.html">
+            
+                <a href="../../../02-algorithm/01-basic/06-backtracking/backtracking.html">
+            
+                    
+                    回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../../../02-algorithm/01-basic/07-depth-first-search/dfs.html">
+            
+                <a href="../../../02-algorithm/01-basic/07-depth-first-search/dfs.html">
+            
+                    
+                    深度优先搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../../../02-algorithm/01-basic/08-breadth-first-search/bfs.html">
+            
+                <a href="../../../02-algorithm/01-basic/08-breadth-first-search/bfs.html">
+            
+                    
+                    宽度优先搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../../../02-algorithm/01-basic/08-greedy/greedy.html">
+            
+                <a href="../../../02-algorithm/01-basic/08-greedy/greedy.html">
+            
+                    
+                    贪心
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" >
+            
+                <span>
+            
+                    
+                    动态规划
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../../02-algorithm/02-advanced/01-dp/01-线性/linear.html">
+            
+                <a href="../../../02-algorithm/02-advanced/01-dp/01-线性/linear.html">
+            
+                    
+                    线性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../../02-algorithm/02-advanced/01-dp/02-区间/interval.html">
+            
+                <a href="../../../02-algorithm/02-advanced/01-dp/02-区间/interval.html">
+            
+                    
+                    区间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" >
+            
+                <span>
+            
+                    
+                    图论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.2.1" data-path="../../../02-algorithm/02-advanced/02-graph/01-connected/connected.html">
+            
+                <a href="../../../02-algorithm/02-advanced/02-graph/01-connected/connected.html">
+            
+                    
+                    连通性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2.2" data-path="../../../02-algorithm/02-advanced/02-graph/02-topological/topological.html">
+            
+                <a href="../../../02-algorithm/02-advanced/02-graph/02-topological/topological.html">
+            
+                    
+                    拓扑排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" >
+            
+                <span>
+            
+                    
+                    字符串
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="../../../02-algorithm/02-advanced/03-string/01-kmp/kmp.html">
+            
+                <a href="../../../02-algorithm/02-advanced/03-string/01-kmp/kmp.html">
+            
+                    
+                    KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.2" data-path="../../../02-algorithm/02-advanced/03-string/02-manacher/manacher.html">
+            
+                <a href="../../../02-algorithm/02-advanced/03-string/02-manacher/manacher.html">
+            
+                    
+                    Manacher
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" >
+            
+                <span>
+            
+                    
+                    数学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.4.1" data-path="../../../02-algorithm/02-advanced/04-math/01-big-num/big-num.html">
+            
+                <a href="../../../02-algorithm/02-advanced/04-math/01-big-num/big-num.html">
+            
+                    
+                    大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.2" data-path="../../../02-algorithm/02-advanced/04-math/02-quick-pow/quick-pow.html">
+            
+                <a href="../../../02-algorithm/02-advanced/04-math/02-quick-pow/quick-pow.html">
+            
+                    
+                    快速幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.3" data-path="../../../02-algorithm/02-advanced/04-math/03-number-theory/number-theory.html">
+            
+                <a href="../../../02-algorithm/02-advanced/04-math/03-number-theory/number-theory.html">
+            
+                    
+                    数论
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >并查集</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5E76;&#x67E5;&#x96C6;">&#x5E76;&#x67E5;&#x96C6;</h1>
+<blockquote>
+<p>&#x670B;&#x53CB;&#x7684;&#x670B;&#x53CB;&#x5C31;&#x662F;&#x670B;&#x53CB;&#x3002;</p>
+</blockquote>
+<p>&#x5E76;&#x67E5;&#x96C6;&#x662F;&#x4E00;&#x79CD;&#x6811;&#x5F62;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x5B83;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x4E00;&#x4E9B;&#x4E0D;&#x4EA4;&#x96C6;&#x7684; <strong>&#x5408;&#x5E76;</strong> &#x53CA; <strong>&#x67E5;&#x8BE2;</strong> &#x95EE;&#x9898;&#x3002; &#x5B83;&#x652F;&#x6301;&#x4E24;&#x79CD;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<ul>
+<li>&#x67E5;&#x627E;&#xFF08;Find&#xFF09;&#xFF1A;&#x786E;&#x5B9A;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x5904;&#x4E8E;&#x54EA;&#x4E2A;&#x5B50;&#x96C6;&#xFF1B;</li>
+<li>&#x5408;&#x5E76;&#xFF08;Union&#xFF09;&#xFF1A;&#x5C06;&#x4E24;&#x4E2A;&#x5B50;&#x96C6;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x3002;</li>
+</ul>
+<h2 id="&#x6A21;&#x677F;">&#x6A21;&#x677F;</h2>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UnionFind</span> </span>{
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] parent;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] rank;
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">UnionFind</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+        parent = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+        rank = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+            parent[i] = i;
+            rank[i] = <span class="hljs-number">0</span>;
+        }
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">size</span><span class="hljs-params">()</span> </span>{
+        <span class="hljs-keyword">return</span> parent.length;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">union</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>{
+        x = find(x);
+        y = find(y);
+        <span class="hljs-keyword">if</span> (x == y) {
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+        }
+        <span class="hljs-keyword">if</span> (rank[x] &gt; rank[y]) {
+            parent[y] = x;
+        } <span class="hljs-keyword">else</span> {
+            parent[x] = y;
+            <span class="hljs-keyword">if</span> (rank[x] == rank[y]) {
+                rank[y]++;
+            }
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">same</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>{
+        <span class="hljs-keyword">return</span> find(x) == find(y);
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">find</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>{
+        <span class="hljs-keyword">if</span> (parent[x] != x) {
+            parent[x] = find(parent[x]);
+        }
+        <span class="hljs-keyword">return</span> parent[x];
+    }
+}
+</code></pre>
+<h2 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h2>
+<h3 id="128-longest-consecutive-sequence">128. longest-consecutive-sequence</h3>
+<hr>
+<p><strong>Description:</strong></p>
+<p>Given an unsorted array of integers, find the length of the longest consecutive elements sequence.</p>
+<p>Your algorithm should run in O(<em>n</em>) complexity.</p>
+<p><strong>Example:</strong></p>
+<pre><code>Input: [100, 4, 200, 1, 3, 2]
+Output: 4
+Explanation: The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4.
+</code></pre><p><strong>Code:</strong></p>
+<pre><code class="lang-java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    Map&lt;Integer, Integer&gt; map;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">longestConsecutive</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>{
+        map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> num : nums) {
+            map.put(num, num + <span class="hljs-number">1</span>);
+        }
+        <span class="hljs-keyword">int</span> ans = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> num : nums) {
+            <span class="hljs-keyword">int</span> ret = find(num + <span class="hljs-number">1</span>);
+            ans = Math.max(ans, ret - num);
+        }
+        <span class="hljs-keyword">return</span> ans;
+    }
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">find</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>{
+        <span class="hljs-keyword">if</span> (map.containsKey(x)) {
+            map.put(x, find(map.get(x)));
+            <span class="hljs-keyword">return</span> map.get(x);
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> x;
+        }
+    }
+}
+</code></pre>
+<h3 id="684-redundant-connection">684. redundant-connection</h3>
+<hr>
+<p><strong>Description:</strong></p>
+<p>In this problem, a tree is an <strong>undirected</strong> graph that is connected and has no cycles.</p>
+<p>The given input is a graph that started as a tree with N nodes (with distinct values 1, 2, ..., N), with one additional edge added. The added edge has two different vertices chosen from 1 to N, and was not an edge that already existed.</p>
+<p>The resulting graph is given as a 2D-array of <code>edges</code>. Each element of <code>edges</code> is a pair <code>[u, v]</code> with <code>u &lt; v</code>, that represents an <strong>undirected</strong> edge connecting nodes <code>u</code>and <code>v</code>.</p>
+<p>Return an edge that can be removed so that the resulting graph is a tree of N nodes. If there are multiple answers, return the answer that occurs last in the given 2D-array. The answer edge <code>[u, v]</code> should be in the same format, with <code>u &lt; v</code>.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: [[1,2], [1,3], [2,3]]
+Output: [2,3]
+Explanation: The given undirected graph will be like this:
+  1
+ / \
+2 - 3
+</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input: [[1,2], [2,3], [3,4], [1,4], [1,5]]
+Output: [1,4]
+Explanation: The given undirected graph will be like this:
+5 - 1 - 2
+    |   |
+    4 - 3
+</code></pre><p><strong>Note:</strong></p>
+<p>The size of the input 2D-array will be between 3 and 1000.</p>
+<p>Every integer represented in the 2D-array will be between 1 and N, where N is the size of the input array.</p>
+<p><a href="https://leetcode.com/problems/redundant-connection/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/redundant-connection/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+ * @lc app=leetcode id=684 lang=java
+ *
+ * [684] Redundant Connection
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] findRedundantConnection(<span class="hljs-keyword">int</span>[][] edges) {
+        UnionFind uf = <span class="hljs-keyword">new</span> UnionFind(edges.length + <span class="hljs-number">1</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] edge : edges) {
+            <span class="hljs-keyword">if</span> (!uf.union(edge[<span class="hljs-number">0</span>], edge[<span class="hljs-number">1</span>])) {
+                <span class="hljs-keyword">return</span> edge;
+            }
+        }
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> IllegalArgumentException();
+    }
+
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UnionFind</span> </span>{
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] parent;
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] rank;
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">UnionFind</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+            parent = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+            rank = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+                parent[i] = i;
+                rank[i] = <span class="hljs-number">0</span>;
+            }
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">size</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> parent.length;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">union</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>{
+            x = find(x);
+            y = find(y);
+            <span class="hljs-keyword">if</span> (x == y) {
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+            }
+            <span class="hljs-keyword">if</span> (rank[x] &gt; rank[y]) {
+                parent[y] = x;
+            } <span class="hljs-keyword">else</span> {
+                parent[x] = y;
+                <span class="hljs-keyword">if</span> (rank[x] == rank[y]) {
+                    rank[y]++;
+                }
+            }
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">same</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>{
+            <span class="hljs-keyword">return</span> find(x) == find(y);
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">find</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>{
+            <span class="hljs-keyword">if</span> (parent[x] != x) {
+                parent[x] = find(parent[x]);
+            }
+            <span class="hljs-keyword">return</span> parent[x];
+        }
+    }
+}
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+<h3 id="685-redudant-connection-ii">685. redudant-connection-ii</h3>
+<hr>
+<p><strong>Description:</strong></p>
+<p>In this problem, a rooted tree is a <strong>directed</strong> graph such that, there is exactly one node (the root) for which all other nodes are descendants of this node, plus every node has exactly one parent, except for the root node which has no parents.</p>
+<p>The given input is a directed graph that started as a rooted tree with N nodes (with distinct values 1, 2, ..., N), with one additional directed edge added. The added edge has two different vertices chosen from 1 to N, and was not an edge that already existed.</p>
+<p>The resulting graph is given as a 2D-array of <code>edges</code>. Each element of <code>edges</code> is a pair <code>[u, v]</code> that represents a <strong>directed</strong> edge connecting nodes <code>u</code> and <code>v</code>, where <code>u</code> is a parent of child <code>v</code>.</p>
+<p>Return an edge that can be removed so that the resulting graph is a rooted tree of N nodes. If there are multiple answers, return the answer that occurs last in the given 2D-array.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: [[1,2], [1,3], [2,3]]
+Output: [2,3]
+Explanation: The given directed graph will be like this:
+  1
+ / \
+v   v
+2--&gt;3
+</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input: [[1,2], [2,3], [3,4], [4,1], [1,5]]
+Output: [4,1]
+Explanation: The given directed graph will be like this:
+5 &lt;- 1 -&gt; 2
+     ^    |
+     |    v
+     4 &lt;- 3
+</code></pre><p><strong>Note:</strong></p>
+<p>The size of the input 2D-array will be between 3 and 1000.</p>
+<p>Every integer represented in the 2D-array will be between 1 and N, where N is the size of the input array.</p>
+<p><a href="https://leetcode.com/problems/redundant-connection-ii/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/redundant-connection-ii/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java"><span class="hljs-comment">/*
+ * @lc app=leetcode id=685 lang=java
+ *
+ * [685] Redundant Connection II
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] findRedundantDirectedConnection(<span class="hljs-keyword">int</span>[][] edges) {
+        <span class="hljs-keyword">int</span> n = edges.length, edgeRemoved = -<span class="hljs-number">1</span>, edgeCycle = -<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span>[] parent = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n + <span class="hljs-number">1</span>];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+            <span class="hljs-keyword">int</span> u = edges[i][<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">int</span> v = edges[i][<span class="hljs-number">1</span>];
+            <span class="hljs-keyword">if</span> (parent[v] != <span class="hljs-number">0</span>) {
+                edgeRemoved = i;
+                <span class="hljs-keyword">break</span>;
+            } <span class="hljs-keyword">else</span> {
+                parent[v] = u;
+            }
+        }
+        UnionFind uf = <span class="hljs-keyword">new</span> UnionFind(n + <span class="hljs-number">1</span>);
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+            <span class="hljs-keyword">if</span> (edgeRemoved == i) {
+                <span class="hljs-keyword">continue</span>;
+            }
+            <span class="hljs-keyword">int</span> u = edges[i][<span class="hljs-number">0</span>];
+            <span class="hljs-keyword">int</span> v = edges[i][<span class="hljs-number">1</span>];
+            <span class="hljs-keyword">if</span> (!uf.union(u, v)) {
+                edgeCycle = i;
+                <span class="hljs-keyword">break</span>;
+            }
+        }
+        <span class="hljs-comment">/* Handle with the cyclic problem only. */</span>
+        <span class="hljs-keyword">if</span> (edgeRemoved == -<span class="hljs-number">1</span>) {
+            <span class="hljs-keyword">return</span> edges[edgeCycle];
+        }
+
+        <span class="hljs-comment">/* Handle with the cyclic problem when we remove the wrong edge. */</span>
+        <span class="hljs-keyword">if</span> (edgeCycle != -<span class="hljs-number">1</span>) { 
+            <span class="hljs-keyword">int</span> v = edges[edgeRemoved][<span class="hljs-number">1</span>];
+            <span class="hljs-keyword">int</span> u = parent[v];
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]{u, v};
+        } 
+
+        <span class="hljs-comment">/* CHandle with the cyclic problem when we remove the right edge. */</span>
+        <span class="hljs-keyword">return</span> edges[edgeRemoved];
+    }
+
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UnionFind</span> </span>{
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] parent;
+        <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] rank;
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">UnionFind</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+            parent = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+            rank = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[n];
+
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) {
+                parent[i] = i;
+                rank[i] = <span class="hljs-number">0</span>;
+            }
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">size</span><span class="hljs-params">()</span> </span>{
+            <span class="hljs-keyword">return</span> parent.length;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">union</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>{
+            x = find(x);
+            y = find(y);
+            <span class="hljs-keyword">if</span> (x == y) {
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
+            }
+            <span class="hljs-keyword">if</span> (rank[x] &gt; rank[y]) {
+                parent[y] = x;
+            } <span class="hljs-keyword">else</span> {
+                parent[x] = y;
+                <span class="hljs-keyword">if</span> (rank[x] == rank[y]) {
+                    rank[y]++;
+                }
+            }
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">same</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>{
+            <span class="hljs-keyword">return</span> find(x) == find(y);
+        }
+
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">find</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x)</span> </span>{
+            <span class="hljs-keyword">if</span> (parent[x] != x) {
+                parent[x] = find(parent[x]);
+            }
+            <span class="hljs-keyword">return</span> parent[x];
+        }
+    }
+}
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<p><a href="https://oi-wiki.org/ds/dsu/" target="_blank">DSU</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="../02-binary-indexed-tree/binary-indexed-tree.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 树状数组">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"并查集","level":"1.2.2.1","depth":3,"next":{"title":"树状数组","level":"1.2.2.2","depth":3,"path":"01-data-structrue/advanced/02-binary-indexed-tree/binary-indexed-tree.md","ref":"01-data-structrue/advanced/02-binary-indexed-tree/binary-indexed-tree.md","articles":[]},"previous":{"title":"进阶","level":"1.2.2","depth":2,"ref":"","articles":[{"title":"并查集","level":"1.2.2.1","depth":3,"path":"01-data-structrue/advanced/01-union-find/union-find.md","ref":"01-data-structrue/advanced/01-union-find/union-find.md","articles":[]},{"title":"树状数组","level":"1.2.2.2","depth":3,"path":"01-data-structrue/advanced/02-binary-indexed-tree/binary-indexed-tree.md","ref":"01-data-structrue/advanced/02-binary-indexed-tree/binary-indexed-tree.md","articles":[]},{"title":"线段树","level":"1.2.2.3","depth":3,"path":"01-data-structrue/advanced/03-segment-tree/segment-tree.md","ref":"01-data-structrue/advanced/03-segment-tree/segment-tree.md","articles":[]},{"title":"字典树","level":"1.2.2.4","depth":3,"path":"01-data-structrue/advanced/04-trie/trie.md","ref":"01-data-structrue/advanced/04-trie/trie.md","articles":[]},{"title":"单调栈","level":"1.2.2.5","depth":3,"path":"01-data-structrue/advanced/05-monotone-stack/monotone-stack.md","ref":"01-data-structrue/advanced/05-monotone-stack/monotone-stack.md","articles":[]},{"title":"单调队列","level":"1.2.2.6","depth":3,"path":"01-data-structrue/advanced/06-monotone-queue/monotone-queue.md","ref":"01-data-structrue/advanced/06-monotone-queue/monotone-queue.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"01-data-structrue/advanced/01-union-find/union-find.md","mtime":"2020-06-06T05:14:41.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-17T08:53:22.954Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

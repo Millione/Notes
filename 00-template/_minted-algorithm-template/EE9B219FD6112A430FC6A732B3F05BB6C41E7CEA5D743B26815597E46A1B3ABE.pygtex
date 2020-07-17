@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}} \PYG{n}{list} \PYG{o}{=} \PYG{n}{Arrays}\PYG{o}{.}\PYG{n+na}{asList}\PYG{o}{(}\PYG{k}{new} \PYG{n}{Integer}\PYG{o}{[]\PYGZob{}}\PYG{l+m+mi}{0}\PYG{o}{,} \PYG{l+m+mi}{1}\PYG{o}{\PYGZcb{});}
+\PYG{c+c1}{// 鸡肋}
+\PYG{n}{Integer}\PYG{o}{[]} \PYG{n}{array} \PYG{o}{=} \PYG{n}{list}\PYG{o}{.}\PYG{n+na}{toArray}\PYG{o}{(}\PYG{k}{new} \PYG{n}{Integer}\PYG{o}{[}\PYG{l+m+mi}{0}\PYG{o}{]);}
+
+
+\PYG{c+c1}{// 以int举例，其它基本数据类型类似}
+\PYG{n}{String} \PYG{n}{str} \PYG{o}{=} \PYG{k+kc}{null}\PYG{o}{;}
+\PYG{k+kt}{int} \PYG{n}{num} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;}
+
+\PYG{n}{str} \PYG{o}{=} \PYG{n}{String}\PYG{o}{.}\PYG{n+na}{valueOf}\PYG{o}{(}\PYG{n}{num}\PYG{o}{);}
+\PYG{n}{str} \PYG{o}{=} \PYG{n}{Integer}\PYG{o}{.}\PYG{n+na}{toString}\PYG{o}{(}\PYG{n}{num}\PYG{o}{);}
+\PYG{n}{str} \PYG{o}{=} \PYG{n}{num} \PYG{o}{+} \PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{o}{;}
+
+\PYG{n}{num} \PYG{o}{=} \PYG{n}{Integer}\PYG{o}{.}\PYG{n+na}{valueOf}\PYG{o}{(}\PYG{n}{str}\PYG{o}{).}\PYG{n+na}{intValue}\PYG{o}{();}
+\end{Verbatim}

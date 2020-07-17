@@ -1,0 +1,1159 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>宽度优先搜索 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../08-greedy/greedy.html" />
+    
+    
+    <link rel="prev" href="../07-depth-first-search/dfs.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    数据结构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../../01-data-structrue/basic/01-array/array.html">
+            
+                <a href="../../../01-data-structrue/basic/01-array/array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../../01-data-structrue/basic/02-linkedlist/linkedlist.html">
+            
+                <a href="../../../01-data-structrue/basic/02-linkedlist/linkedlist.html">
+            
+                    
+                    链表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../../01-data-structrue/basic/03-stack-queue/stack-queue.html">
+            
+                <a href="../../../01-data-structrue/basic/03-stack-queue/stack-queue.html">
+            
+                    
+                    栈和队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../../../01-data-structrue/basic/04-tree/tree.html">
+            
+                <a href="../../../01-data-structrue/basic/04-tree/tree.html">
+            
+                    
+                    树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../../01-data-structrue/basic/05-set/set.html">
+            
+                <a href="../../../01-data-structrue/basic/05-set/set.html">
+            
+                    
+                    集合
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" data-path="../../../01-data-structrue/basic/06-map/map.html">
+            
+                <a href="../../../01-data-structrue/basic/06-map/map.html">
+            
+                    
+                    哈希表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.7" data-path="../../../01-data-structrue/basic/07-heap/heap.html">
+            
+                <a href="../../../01-data-structrue/basic/07-heap/heap.html">
+            
+                    
+                    堆
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" >
+            
+                <span>
+            
+                    
+                    进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../../01-data-structrue/advanced/01-union-find/union-find.html">
+            
+                <a href="../../../01-data-structrue/advanced/01-union-find/union-find.html">
+            
+                    
+                    并查集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../../../01-data-structrue/advanced/02-binary-indexed-tree/binary-indexed-tree.html">
+            
+                <a href="../../../01-data-structrue/advanced/02-binary-indexed-tree/binary-indexed-tree.html">
+            
+                    
+                    树状数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../../../01-data-structrue/advanced/03-segment-tree/segment-tree.html">
+            
+                <a href="../../../01-data-structrue/advanced/03-segment-tree/segment-tree.html">
+            
+                    
+                    线段树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../../../01-data-structrue/advanced/04-trie/trie.html">
+            
+                <a href="../../../01-data-structrue/advanced/04-trie/trie.html">
+            
+                    
+                    字典树
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../../../01-data-structrue/advanced/05-monotone-stack/monotone-stack.html">
+            
+                <a href="../../../01-data-structrue/advanced/05-monotone-stack/monotone-stack.html">
+            
+                    
+                    单调栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../../../01-data-structrue/advanced/06-monotone-queue/monotone-queue.html">
+            
+                <a href="../../../01-data-structrue/advanced/06-monotone-queue/monotone-queue.html">
+            
+                    
+                    单调队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    算法
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" >
+            
+                <span>
+            
+                    
+                    基础
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../01-sort/sort.html">
+            
+                <a href="../01-sort/sort.html">
+            
+                    
+                    排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../02-binary-search/binary-search.html">
+            
+                <a href="../02-binary-search/binary-search.html">
+            
+                    
+                    二分查找
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../03-two-pointer/two-pointer.html">
+            
+                <a href="../03-two-pointer/two-pointer.html">
+            
+                    
+                    双指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../04-sliding-window/sliding-window.html">
+            
+                <a href="../04-sliding-window/sliding-window.html">
+            
+                    
+                    滑动窗口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../05-divide-and-conquer/divide-and-conquer.html">
+            
+                <a href="../05-divide-and-conquer/divide-and-conquer.html">
+            
+                    
+                    分治
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../06-backtracking/backtracking.html">
+            
+                <a href="../06-backtracking/backtracking.html">
+            
+                    
+                    回溯
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../07-depth-first-search/dfs.html">
+            
+                <a href="../07-depth-first-search/dfs.html">
+            
+                    
+                    深度优先搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.1.8" data-path="bfs.html">
+            
+                <a href="bfs.html">
+            
+                    
+                    宽度优先搜索
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../08-greedy/greedy.html">
+            
+                <a href="../08-greedy/greedy.html">
+            
+                    
+                    贪心
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" >
+            
+                <span>
+            
+                    
+                    进阶
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" >
+            
+                <span>
+            
+                    
+                    动态规划
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1.1" data-path="../../02-advanced/01-dp/01-线性/linear.html">
+            
+                <a href="../../02-advanced/01-dp/01-线性/linear.html">
+            
+                    
+                    线性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.1.2" data-path="../../02-advanced/01-dp/02-区间/interval.html">
+            
+                <a href="../../02-advanced/01-dp/02-区间/interval.html">
+            
+                    
+                    区间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" >
+            
+                <span>
+            
+                    
+                    图论
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.2.1" data-path="../../02-advanced/02-graph/01-connected/connected.html">
+            
+                <a href="../../02-advanced/02-graph/01-connected/connected.html">
+            
+                    
+                    连通性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2.2" data-path="../../02-advanced/02-graph/02-topological/topological.html">
+            
+                <a href="../../02-advanced/02-graph/02-topological/topological.html">
+            
+                    
+                    拓扑排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" >
+            
+                <span>
+            
+                    
+                    字符串
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.3.1" data-path="../../02-advanced/03-string/01-kmp/kmp.html">
+            
+                <a href="../../02-advanced/03-string/01-kmp/kmp.html">
+            
+                    
+                    KMP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3.2" data-path="../../02-advanced/03-string/02-manacher/manacher.html">
+            
+                <a href="../../02-advanced/03-string/02-manacher/manacher.html">
+            
+                    
+                    Manacher
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4" >
+            
+                <span>
+            
+                    
+                    数学
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.4.1" data-path="../../02-advanced/04-math/01-big-num/big-num.html">
+            
+                <a href="../../02-advanced/04-math/01-big-num/big-num.html">
+            
+                    
+                    大数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.2" data-path="../../02-advanced/04-math/02-quick-pow/quick-pow.html">
+            
+                <a href="../../02-advanced/04-math/02-quick-pow/quick-pow.html">
+            
+                    
+                    快速幂
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.4.3" data-path="../../02-advanced/04-math/03-number-theory/number-theory.html">
+            
+                <a href="../../02-advanced/04-math/03-number-theory/number-theory.html">
+            
+                    
+                    数论
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >宽度优先搜索</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5BBD;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;">&#x5BBD;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;</h1>
+<p>BFS &#x7684;&#x6838;&#x5FC3;&#x601D;&#x60F3;&#x5E94;&#x8BE5;&#x4E0D;&#x96BE;&#x7406;&#x89E3;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x628A;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#x62BD;&#x8C61;&#x6210;&#x56FE;&#xFF0C;&#x4ECE;&#x4E00;&#x4E2A;&#x70B9;&#x5F00;&#x59CB;&#xFF0C;&#x5411;&#x56DB;&#x5468;&#x5F00;&#x59CB;&#x6269;&#x6563;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x5199; BFS &#x7B97;&#x6CD5;&#x90FD;&#x662F;&#x7528;&#x300C;&#x961F;&#x5217;&#x300D;&#x8FD9;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x6BCF;&#x6B21;&#x5C06;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x5468;&#x56F4;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x52A0;&#x5165;&#x961F;&#x5217;&#x3002;</p>
+<p>BFS &#x76F8;&#x5BF9; DFS &#x7684;&#x6700;&#x4E3B;&#x8981;&#x7684;&#x533A;&#x522B;&#x662F;&#xFF1A;<strong>BFS &#x627E;&#x5230;&#x7684;&#x8DEF;&#x5F84;&#x4E00;&#x5B9A;&#x662F;&#x6700;&#x77ED;&#x7684;&#xFF0C;&#x4F46;&#x4EE3;&#x4EF7;&#x5C31;&#x662F;&#x7A7A;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x6BD4; DFS &#x5927;&#x5F88;&#x591A;&#x3002;</strong></p>
+<p>&#x5728;&#x7A0B;&#x5E8F;&#x5B9E;&#x73B0; BFS &#x65F6;&#x9700;&#x8981;&#x8003;&#x8651;&#x4EE5;&#x4E0B;&#x95EE;&#x9898;&#xFF1A;</p>
+<ul>
+<li>&#x961F;&#x5217;&#xFF1A;&#x7528;&#x6765;&#x5B58;&#x50A8;&#x6BCF;&#x4E00;&#x8F6E;&#x904D;&#x5386;&#x5F97;&#x5230;&#x7684;&#x8282;&#x70B9;&#xFF1B;</li>
+<li>&#x6807;&#x8BB0;&#xFF1A;&#x5BF9;&#x4E8E;&#x904D;&#x5386;&#x8FC7;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x5E94;&#x8BE5;&#x5C06;&#x5B83;&#x6807;&#x8BB0;&#xFF0C;&#x9632;&#x6B62;&#x91CD;&#x590D;&#x904D;&#x5386;&#x3002;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x5BBD;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#x76F8;&#x5E94;&#x9898;&#x76EE;&#x7D22;&#x5F15;(&#x6301;&#x7EED;&#x66F4;&#x65B0;)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><a href="https://leetcode.com/problems/word-ladder" target="_blank">127. Word Ladder</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://leetcode.com/problems/perfect-squares" target="_blank">279. Perfect Squares</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><a href="https://leetcode.com/problems/shortest-path-in-binary-matrix" target="_blank">1091. Shortest Path in Binary Matrix</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x6A21;&#x677F;">&#x6A21;&#x677F;</h2>
+<pre><code class="lang-java"><span class="hljs-comment">// &#x8BA1;&#x7B97;&#x4ECE;&#x8D77;&#x70B9; start &#x5230;&#x7EC8;&#x70B9; target &#x7684;&#x6700;&#x8FD1;&#x8DDD;&#x79BB;</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">BFS</span><span class="hljs-params">(Node start, Node target)</span> </span>{
+    Queue&lt;Node&gt; q; <span class="hljs-comment">// &#x6838;&#x5FC3;&#x6570;&#x636E;&#x7ED3;&#x6784;</span>
+    Set&lt;Node&gt; visited; <span class="hljs-comment">// &#x907F;&#x514D;&#x8D70;&#x56DE;&#x5934;&#x8DEF;</span>
+
+    q.offer(start); <span class="hljs-comment">// &#x5C06;&#x8D77;&#x70B9;&#x52A0;&#x5165;&#x961F;&#x5217;</span>
+    visited.add(start);
+    <span class="hljs-keyword">int</span> step = <span class="hljs-number">0</span>; <span class="hljs-comment">// &#x8BB0;&#x5F55;&#x6269;&#x6563;&#x7684;&#x6B65;&#x6570;</span>
+
+    <span class="hljs-keyword">while</span> (q not empty) {
+        <span class="hljs-keyword">int</span> sz = q.size();
+        <span class="hljs-comment">/* &#x5C06;&#x5F53;&#x524D;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x5411;&#x56DB;&#x5468;&#x6269;&#x6563; */</span>
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; sz; i++) {
+            Node cur = q.poll();
+            <span class="hljs-comment">/* &#x5212;&#x91CD;&#x70B9;&#xFF1A;&#x8FD9;&#x91CC;&#x5224;&#x65AD;&#x662F;&#x5426;&#x5230;&#x8FBE;&#x7EC8;&#x70B9; */</span>
+            <span class="hljs-keyword">if</span> (cur is target)
+                <span class="hljs-keyword">return</span> step;
+            <span class="hljs-comment">/* &#x5C06; cur &#x7684;&#x76F8;&#x90BB;&#x8282;&#x70B9;&#x52A0;&#x5165;&#x961F;&#x5217; */</span>
+            <span class="hljs-keyword">for</span> (Node x : cur.adj())
+                <span class="hljs-keyword">if</span> (x not in visited) {
+                    q.offer(x);
+                    visited.add(x);
+                }
+        }
+        <span class="hljs-comment">/* &#x5212;&#x91CD;&#x70B9;&#xFF1A;&#x66F4;&#x65B0;&#x6B65;&#x6570;&#x5728;&#x8FD9;&#x91CC; */</span>
+        step++;
+    }
+}
+</code></pre>
+<h2 id="&#x9898;&#x76EE;">&#x9898;&#x76EE;</h2>
+<h3 id="1091-shortest-path-in-binary-matrix">1091. shortest-path-in-binary-matrix</h3>
+<p><strong>Description:</strong></p>
+<p>In an N by N square grid, each cell is either empty (0) or blocked (1).</p>
+<p>A <em>clear path from top-left to bottom-right</em> has length <code>k</code> if and only if it is composed of cells <code>C_1, C_2, ..., C_k</code> such that:</p>
+<ul>
+<li>Adjacent cells <code>C_i</code> and <code>C_{i+1}</code> are connected 8-directionally (ie., they are different and share an edge or corner)</li>
+<li><code>C_1</code> is at location <code>(0, 0)</code> (ie. has value <code>grid[0][0]</code>)</li>
+<li><code>C_k</code> is at location <code>(N-1, N-1)</code> (ie. has value <code>grid[N-1][N-1]</code>)</li>
+<li>If <code>C_i</code> is located at <code>(r, c)</code>, then <code>grid[r][c]</code> is empty (ie. <code>grid[r][c] == 0</code>).</li>
+</ul>
+<p>Return the length of the shortest such clear path from top-left to bottom-right. If such a path does not exist, return -1.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: [[0,1],[1,0]]
+
+Output: 2
+</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input: [[0,0,0],[1,1,0],[1,1,0]]
+
+Output: 4
+</code></pre><p><strong>Note:</strong></p>
+<ol>
+<li><code>1 &lt;= grid.length == grid[0].length &lt;= 100</code></li>
+<li><code>grid[r][c]</code> is <code>0</code> or <code>1</code></li>
+</ol>
+<p><a href="https://leetcode.com/problems/shortest-path-in-binary-matrix/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/shortest-path-in-binary-matrix/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java">
+<span class="hljs-keyword">import</span> java.util.ArrayDeque;
+<span class="hljs-keyword">import</span> java.util.Queue;
+
+<span class="hljs-comment">/*
+ * @lc app=leetcode id=1091 lang=java
+ *
+ * [1091] Shortest Path in Binary Matrix
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span> </span>{
+        <span class="hljs-keyword">int</span> x;
+        <span class="hljs-keyword">int</span> y;
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Node</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y)</span> </span>{
+            <span class="hljs-keyword">this</span>.x = x;
+            <span class="hljs-keyword">this</span>.y = y;
+        }
+    }
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">shortestPathBinaryMatrix</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] grid)</span> </span>{
+        <span class="hljs-keyword">int</span>[][] dir = {{-<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>}, {-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}, {-<span class="hljs-number">1</span>, <span class="hljs-number">1</span>}, {<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>}, {<span class="hljs-number">0</span>, <span class="hljs-number">1</span>}, {<span class="hljs-number">1</span>, -<span class="hljs-number">1</span>}, {<span class="hljs-number">1</span>, <span class="hljs-number">0</span>}, {<span class="hljs-number">1</span>, <span class="hljs-number">1</span>}};
+        <span class="hljs-keyword">int</span> m = grid.length;
+        <span class="hljs-keyword">int</span> n = grid[<span class="hljs-number">0</span>].length;
+        Queue&lt;Node&gt; queue = <span class="hljs-keyword">new</span> ArrayDeque&lt;&gt;();
+        queue.offer(<span class="hljs-keyword">new</span> Node(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
+        <span class="hljs-keyword">int</span> ans = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (!queue.isEmpty()) {
+            ans++;
+            <span class="hljs-keyword">int</span> sz = queue.size();
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; sz; i++) {
+                Node node = queue.poll();
+                <span class="hljs-keyword">int</span> x = node.x;
+                <span class="hljs-keyword">int</span> y = node.y;
+                <span class="hljs-keyword">if</span> (grid[x][y] == <span class="hljs-number">1</span>) {
+                    <span class="hljs-keyword">continue</span>;
+                }
+                <span class="hljs-keyword">if</span> (x == m - <span class="hljs-number">1</span> &amp;&amp; y == n - <span class="hljs-number">1</span>) {
+                    <span class="hljs-keyword">return</span> ans;
+                }
+                grid[x][y] = <span class="hljs-number">1</span>; <span class="hljs-comment">// &#x6807;&#x8BB0;</span>
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span>[] d : dir) {
+                    <span class="hljs-keyword">int</span> xx = x + d[<span class="hljs-number">0</span>];
+                    <span class="hljs-keyword">int</span> yy = y + d[<span class="hljs-number">1</span>];
+                    <span class="hljs-keyword">if</span> (xx &lt; <span class="hljs-number">0</span> || xx &gt;= m || yy &lt; <span class="hljs-number">0</span> || yy &gt;= n) {
+                        <span class="hljs-keyword">continue</span>;
+                    }
+                    queue.offer(<span class="hljs-keyword">new</span> Node(xx, yy));
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> -<span class="hljs-number">1</span>;
+    }
+}
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+<h3 id="279-perfect-squares">279. perfect-squares</h3>
+<p><strong>Description:</strong></p>
+<p>Given a positive integer <em>n</em>, find the least number of perfect square numbers (for example, <code>1, 4, 9, 16, ...</code>) which sum to <em>n</em>.</p>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input: n = 12
+Output: 3 
+Explanation: 12 = 4 + 4 + 4.
+</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input: n = 13
+Output: 2
+Explanation: 13 = 4 + 9.
+</code></pre><p><a href="https://leetcode.com/problems/perfect-squares/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/perfect-squares/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.ArrayDeque;
+<span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Queue;
+
+<span class="hljs-comment">/*
+ * @lc app=leetcode id=279 lang=java
+ *
+ * [279] Perfect Squares
+ *
+ * &#x53EF;&#x4EE5;&#x5C06;&#x6BCF;&#x4E2A;&#x6574;&#x6570;&#x770B;&#x6210;&#x56FE;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x5982;&#x679C;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x4E4B;&#x5DEE;&#x4E3A;&#x4E00;&#x4E2A;&#x5E73;&#x65B9;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E24;&#x4E2A;&#x6574;&#x6570;&#x6240;&#x5728;&#x7684;&#x8282;&#x70B9;&#x5C31;&#x6709;&#x4E00;&#x6761;&#x8FB9;&#x3002;
+ *
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">numSquares</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+        List&lt;Integer&gt; squares = generateSquares(n);
+        Queue&lt;Integer&gt; queue = <span class="hljs-keyword">new</span> ArrayDeque&lt;&gt;();
+        <span class="hljs-keyword">boolean</span>[] visited = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[n + <span class="hljs-number">1</span>];
+        queue.add(n);
+        visited[n] = <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">int</span> level = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (!queue.isEmpty()) {
+            <span class="hljs-keyword">int</span> size = queue.size();
+            level++;
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; size; i++) {
+                <span class="hljs-keyword">int</span> cur = queue.poll();
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> s : squares) {
+                    <span class="hljs-keyword">int</span> next = cur - s;
+                    <span class="hljs-keyword">if</span> (next &lt; <span class="hljs-number">0</span>) {
+                        <span class="hljs-keyword">break</span>;
+                    }
+                    <span class="hljs-keyword">if</span> (next == <span class="hljs-number">0</span>) {
+                        <span class="hljs-keyword">return</span> level;
+                    }
+                    <span class="hljs-keyword">if</span> (visited[next]) {
+                        <span class="hljs-keyword">continue</span>;
+                    }
+                    visited[next] = <span class="hljs-keyword">true</span>;
+                    queue.add(next);
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> n;
+    }
+
+    <span class="hljs-comment">/**
+     * &#x751F;&#x6210;&#x5C0F;&#x4E8E; n &#x7684;&#x5E73;&#x65B9;&#x6570;&#x5E8F;&#x5217;
+     * <span class="hljs-doctag">@return</span> 1,4,9,...
+     */</span>
+    <span class="hljs-function"><span class="hljs-keyword">private</span> List&lt;Integer&gt; <span class="hljs-title">generateSquares</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n)</span> </span>{
+        List&lt;Integer&gt; squares = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">int</span> square = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> diff = <span class="hljs-number">3</span>;
+        <span class="hljs-keyword">while</span> (square &lt;= n) {
+            squares.add(square);
+            square += diff;
+            diff += <span class="hljs-number">2</span>;
+        }
+        <span class="hljs-keyword">return</span> squares;
+    }
+}
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+<h3 id="127-word-ladder">127. word-ladder</h3>
+<p>Given two words (<em>beginWord</em> and <em>endWord</em>), and a dictionary&apos;s word list, find the length of shortest transformation sequence from <em>beginWord</em> to <em>endWord</em>, such that:</p>
+<ol>
+<li>Only one letter can be changed at a time.</li>
+<li>Each transformed word must exist in the word list.</li>
+</ol>
+<p><strong>Note:</strong></p>
+<ul>
+<li>Return 0 if there is no such transformation sequence.</li>
+<li>All words have the same length.</li>
+<li>All words contain only lowercase alphabetic characters.</li>
+<li>You may assume no duplicates in the word list.</li>
+<li>You may assume <em>beginWord</em> and <em>endWord</em> are non-empty and are not the same.</li>
+</ul>
+<p><strong>Example 1:</strong></p>
+<pre><code>Input:
+beginWord = &quot;hit&quot;,
+endWord = &quot;cog&quot;,
+wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;,&quot;cog&quot;]
+
+Output: 5
+
+Explanation: As one shortest transformation is &quot;hit&quot; -&gt; &quot;hot&quot; -&gt; &quot;dot&quot; -&gt; &quot;dog&quot; -&gt; &quot;cog&quot;,
+return its length 5.
+</code></pre><p><strong>Example 2:</strong></p>
+<pre><code>Input:
+beginWord = &quot;hit&quot;
+endWord = &quot;cog&quot;
+wordList = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;]
+
+Output: 0
+
+Explanation: The endWord &quot;cog&quot; is not in wordList, therefore no possible transformation.
+</code></pre><p><a href="https://leetcode.com/problems/word-ladder/discuss/?currentPage=1&amp;orderBy=most_votes&amp;query=" target="_blank">Discussion</a> | <a href="https://leetcode.com/problems/word-ladder/solution/" target="_blank">Solution</a></p>
+<p><strong>Code:</strong></p>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> java.util.ArrayList;
+<span class="hljs-keyword">import</span> java.util.LinkedList;
+<span class="hljs-keyword">import</span> java.util.List;
+<span class="hljs-keyword">import</span> java.util.Queue;
+
+<span class="hljs-comment">/*
+ * @lc app=leetcode id=127 lang=java
+ *
+ * [127] Word Ladder
+ *
+ * &#x5EFA;&#x56FE;
+ *
+ */</span>
+
+<span class="hljs-comment">// @lc code=start</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>{
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">ladderLength</span><span class="hljs-params">(String beginWord, String endWord, List&lt;String&gt; wordList)</span> </span>{
+        wordList.add(beginWord);
+        <span class="hljs-keyword">int</span> N = wordList.size();
+        <span class="hljs-keyword">int</span> start = N - <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> end = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (end &lt; N &amp;&amp; !wordList.get(end).equals(endWord)) {
+            end++;
+        }
+        <span class="hljs-keyword">if</span> (end == N) {
+            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+        }
+        List&lt;Integer&gt;[] graphic = buildGraphic(wordList);
+        <span class="hljs-keyword">return</span> getShortestPath(graphic, start, end);
+    }
+
+    <span class="hljs-keyword">private</span> List&lt;Integer&gt;[] buildGraphic(List&lt;String&gt; wordList) {
+        <span class="hljs-keyword">int</span> N = wordList.size();
+        List&lt;Integer&gt;[] graphic = <span class="hljs-keyword">new</span> List[N];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; N; i++) {
+            graphic[i] = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; N; j++) {
+                <span class="hljs-keyword">if</span> (isConnect(wordList.get(i), wordList.get(j))) {
+                    graphic[i].add(j);
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> graphic;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">isConnect</span><span class="hljs-params">(String s1, String s2)</span> </span>{
+        <span class="hljs-keyword">int</span> diffCnt = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; s1.length() &amp;&amp; diffCnt &lt;= <span class="hljs-number">1</span>; i++) {
+            <span class="hljs-keyword">if</span> (s1.charAt(i) != s2.charAt(i)) {
+                diffCnt++;
+            }
+        }
+        <span class="hljs-keyword">return</span> diffCnt == <span class="hljs-number">1</span>;
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getShortestPath</span><span class="hljs-params">(List&lt;Integer&gt;[] graphic, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> end)</span> </span>{
+        Queue&lt;Integer&gt; queue = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;();
+        <span class="hljs-keyword">boolean</span>[] marked = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[graphic.length];
+        queue.add(start);
+        marked[start] = <span class="hljs-keyword">true</span>;
+        <span class="hljs-keyword">int</span> path = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">while</span> (!queue.isEmpty()) {
+            <span class="hljs-keyword">int</span> size = queue.size();
+            path++;
+            <span class="hljs-keyword">while</span> (size-- &gt; <span class="hljs-number">0</span>) {
+                <span class="hljs-keyword">int</span> cur = queue.poll();
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> next : graphic[cur]) {
+                    <span class="hljs-keyword">if</span> (next == end) {
+                        <span class="hljs-keyword">return</span> path;
+                    }
+                    <span class="hljs-keyword">if</span> (marked[next]) {
+                        <span class="hljs-keyword">continue</span>;
+                    }
+                    marked[next] = <span class="hljs-keyword">true</span>;
+                    queue.add(next);
+                }
+            }
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+}
+<span class="hljs-comment">// @lc code=end</span>
+</code></pre>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<p><a href="https://labuladong.gitbook.io/algo/di-ling-zhang-bi-du-xi-lie/bfs-kuang-jia" target="_blank">&#x53CC;&#x5411;BFS&#x4F18;&#x5316;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../07-depth-first-search/dfs.html" class="navigation navigation-prev " aria-label="Previous page: 深度优先搜索">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../08-greedy/greedy.html" class="navigation navigation-next " aria-label="Next page: 贪心">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"宽度优先搜索","level":"1.3.1.8","depth":3,"next":{"title":"贪心","level":"1.3.1.9","depth":3,"path":"02-algorithm/01-basic/08-greedy/greedy.md","ref":"02-algorithm/01-basic/08-greedy/greedy.md","articles":[]},"previous":{"title":"深度优先搜索","level":"1.3.1.7","depth":3,"path":"02-algorithm/01-basic/07-depth-first-search/dfs.md","ref":"02-algorithm/01-basic/07-depth-first-search/dfs.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"02-algorithm/01-basic/08-breadth-first-search/bfs.md","mtime":"2020-05-18T09:24:21.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-17T08:53:22.954Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

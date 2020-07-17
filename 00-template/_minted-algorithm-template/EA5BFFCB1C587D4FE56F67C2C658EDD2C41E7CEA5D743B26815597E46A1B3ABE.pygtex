@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{levelOrder}\PYG{o}{(}\PYG{n}{TreeNode} \PYG{n}{root}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{k}{if} \PYG{o}{(}\PYG{n}{root} \PYG{o}{==} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{return}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{n}{Queue}\PYG{o}{\PYGZlt{}}\PYG{n}{TreeNode}\PYG{o}{\PYGZgt{}} \PYG{n}{queue} \PYG{o}{=} \PYG{k}{new} \PYG{n}{LinkedList}\PYG{o}{\PYGZlt{}\PYGZgt{}();}
+    \PYG{n}{queue}\PYG{o}{.}\PYG{n+na}{offer}\PYG{o}{(}\PYG{n}{root}\PYG{o}{);}
+    \PYG{k}{while} \PYG{o}{(!}\PYG{n}{queue}\PYG{o}{.}\PYG{n+na}{isEmpty}\PYG{o}{())} \PYG{o}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{sz} \PYG{o}{=} \PYG{n}{queue}\PYG{o}{.}\PYG{n+na}{size}\PYG{o}{();}
+        \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{sz}\PYG{o}{;} \PYG{n}{i}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+            \PYG{n}{TreeNode} \PYG{n}{node} \PYG{o}{=} \PYG{n}{queue}\PYG{o}{.}\PYG{n+na}{poll}\PYG{o}{();}
+            \PYG{c+c1}{// write your code here}
+            \PYG{k}{if} \PYG{o}{(}\PYG{n}{node}\PYG{o}{.}\PYG{n+na}{left} \PYG{o}{!=} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{queue}\PYG{o}{.}\PYG{n+na}{offer}\PYG{o}{(}\PYG{n}{node}\PYG{o}{.}\PYG{n+na}{left}\PYG{o}{);}
+            \PYG{o}{\PYGZcb{}}
+            \PYG{k}{if} \PYG{o}{(}\PYG{n}{node}\PYG{o}{.}\PYG{n+na}{right} \PYG{o}{!=} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{queue}\PYG{o}{.}\PYG{n+na}{offer}\PYG{o}{(}\PYG{n}{node}\PYG{o}{.}\PYG{n+na}{right}\PYG{o}{);}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{o}{\PYGZcb{}}
+    \PYG{o}{\PYGZcb{}}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

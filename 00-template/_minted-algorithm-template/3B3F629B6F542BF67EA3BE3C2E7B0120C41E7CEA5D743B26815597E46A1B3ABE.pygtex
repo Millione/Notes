@@ -1,0 +1,73 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{class} \PYG{n+nc}{Tarjan} \PYG{o}{\PYGZob{}}
+
+    \PYG{k+kd}{private} \PYG{k+kt}{int} \PYG{n}{V}\PYG{o}{;}
+    \PYG{k+kd}{private} \PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}[]} \PYG{n}{G}\PYG{o}{;}
+    \PYG{k+kd}{private} \PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n}{res}\PYG{o}{;}
+    \PYG{k+kd}{private} \PYG{k+kt}{boolean}\PYG{o}{[]} \PYG{n}{inStack}\PYG{o}{;}
+    \PYG{k+kd}{private} \PYG{n}{Deque}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}} \PYG{n}{stack}\PYG{o}{;}
+    \PYG{c+c1}{// dfn[u]：深度优先搜索遍历时结点u被搜索的次序}
+    \PYG{c+c1}{// low[u]：以u为根的子树中的结点的dfn的最小值}
+    \PYG{k+kd}{private} \PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{dfn}\PYG{o}{;}
+    \PYG{k+kd}{private} \PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{low}\PYG{o}{;}
+    \PYG{k+kd}{private} \PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{sccBelong}\PYG{o}{;}
+    \PYG{k+kd}{private} \PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{sccSz}\PYG{o}{;}
+    \PYG{k+kd}{private} \PYG{k+kt}{int} \PYG{n}{dfsCnt}\PYG{o}{;}
+    \PYG{k+kd}{private} \PYG{k+kt}{int} \PYG{n}{sccCnt}\PYG{o}{;}
+
+    \PYG{k+kd}{public} \PYG{n+nf}{Tarjan}\PYG{o}{(}\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}[]} \PYG{n}{G}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{V}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{this}\PYG{o}{.}\PYG{n+na}{G} \PYG{o}{=} \PYG{n}{G}\PYG{o}{;}
+        \PYG{k}{this}\PYG{o}{.}\PYG{n+na}{V} \PYG{o}{=} \PYG{n}{V}\PYG{o}{;}
+        \PYG{n}{stack} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ArrayDeque}\PYG{o}{\PYGZlt{}\PYGZgt{}();}
+        \PYG{n}{inStack} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{boolean}\PYG{o}{[}\PYG{n}{V}\PYG{o}{];}
+        \PYG{n}{dfn} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{int}\PYG{o}{[}\PYG{n}{V}\PYG{o}{];}
+        \PYG{n}{low} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{int}\PYG{o}{[}\PYG{n}{V}\PYG{o}{];}
+        \PYG{n}{sccBelong} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{int}\PYG{o}{[}\PYG{n}{V}\PYG{o}{];}
+        \PYG{n}{sccSz} \PYG{o}{=} \PYG{k}{new} \PYG{k+kt}{int}\PYG{o}{[}\PYG{n}{V}\PYG{o}{];}
+        \PYG{n}{dfsCnt} \PYG{o}{=} \PYG{n}{sccCnt} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;}
+        \PYG{n}{res} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}\PYGZgt{}();}
+    \PYG{o}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}\PYGZgt{}} \PYG{n+nf}{findScc}\PYG{o}{()} \PYG{o}{\PYGZob{}}
+        \PYG{c+c1}{// 从下标索引1开始}
+        \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{o}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{V}\PYG{o}{;} \PYG{n}{i}\PYG{o}{++)} \PYG{o}{\PYGZob{}}
+            \PYG{k}{if} \PYG{o}{(}\PYG{n}{dfn}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{dfs}\PYG{o}{(}\PYG{n}{i}\PYG{o}{);}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{k}{return} \PYG{n}{res}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+
+    \PYG{k+kd}{private} \PYG{k+kt}{void} \PYG{n+nf}{dfs}\PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{u}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{n}{dfn}\PYG{o}{[}\PYG{n}{u}\PYG{o}{]} \PYG{o}{=} \PYG{n}{low}\PYG{o}{[}\PYG{n}{u}\PYG{o}{]} \PYG{o}{=} \PYG{o}{++}\PYG{n}{dfsCnt}\PYG{o}{;}
+        \PYG{n}{inStack}\PYG{o}{[}\PYG{n}{u}\PYG{o}{]} \PYG{o}{=} \PYG{k+kc}{true}\PYG{o}{;}
+        \PYG{n}{stack}\PYG{o}{.}\PYG{n+na}{push}\PYG{o}{(}\PYG{n}{u}\PYG{o}{);}
+        \PYG{k}{for} \PYG{o}{(}\PYG{k+kt}{int} \PYG{n}{v} \PYG{o}{:} \PYG{n}{G}\PYG{o}{[}\PYG{n}{u}\PYG{o}{])} \PYG{o}{\PYGZob{}}
+            \PYG{k}{if} \PYG{o}{(}\PYG{n}{dfn}\PYG{o}{[}\PYG{n}{v}\PYG{o}{]} \PYG{o}{==} \PYG{l+m+mi}{0}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{dfs}\PYG{o}{(}\PYG{n}{v}\PYG{o}{);}
+                \PYG{k}{if} \PYG{o}{(}\PYG{n}{low}\PYG{o}{[}\PYG{n}{v}\PYG{o}{]} \PYG{o}{\PYGZlt{}} \PYG{n}{low}\PYG{o}{[}\PYG{n}{u}\PYG{o}{])} \PYG{o}{\PYGZob{}}
+                    \PYG{n}{low}\PYG{o}{[}\PYG{n}{u}\PYG{o}{]} \PYG{o}{=} \PYG{n}{low}\PYG{o}{[}\PYG{n}{v}\PYG{o}{];}
+                \PYG{o}{\PYGZcb{}}
+            \PYG{o}{\PYGZcb{}} \PYG{k}{else} \PYG{k}{if} \PYG{o}{(}\PYG{n}{inStack}\PYG{o}{[}\PYG{n}{v}\PYG{o}{]} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{dfn}\PYG{o}{[}\PYG{n}{v}\PYG{o}{]} \PYG{o}{\PYGZlt{}} \PYG{n}{dfn}\PYG{o}{[}\PYG{n}{u}\PYG{o}{])} \PYG{o}{\PYGZob{}}
+                \PYG{n}{low}\PYG{o}{[}\PYG{n}{u}\PYG{o}{]} \PYG{o}{=} \PYG{n}{dfn}\PYG{o}{[}\PYG{n}{v}\PYG{o}{];}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{k}{if} \PYG{o}{(}\PYG{n}{dfn}\PYG{o}{[}\PYG{n}{u}\PYG{o}{]} \PYG{o}{==} \PYG{n}{low}\PYG{o}{[}\PYG{n}{u}\PYG{o}{])} \PYG{o}{\PYGZob{}}
+            \PYG{n}{List}\PYG{o}{\PYGZlt{}}\PYG{n}{Integer}\PYG{o}{\PYGZgt{}} \PYG{n}{tmp} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ArrayList}\PYG{o}{\PYGZlt{}\PYGZgt{}();}
+            \PYG{n}{sccCnt}\PYG{o}{++;}
+            \PYG{k}{for} \PYG{o}{(;} \PYG{o}{;} \PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{k+kt}{int} \PYG{n}{v} \PYG{o}{=} \PYG{n}{stack}\PYG{o}{.}\PYG{n+na}{pop}\PYG{o}{();}
+                \PYG{n}{inStack}\PYG{o}{[}\PYG{n}{v}\PYG{o}{]} \PYG{o}{=} \PYG{k+kc}{false}\PYG{o}{;}
+                \PYG{n}{sccBelong}\PYG{o}{[}\PYG{n}{v}\PYG{o}{]} \PYG{o}{=} \PYG{n}{sccCnt}\PYG{o}{;}
+                \PYG{n}{sccSz}\PYG{o}{[}\PYG{n}{sccCnt}\PYG{o}{]++;}
+                \PYG{n}{tmp}\PYG{o}{.}\PYG{n+na}{add}\PYG{o}{(}\PYG{n}{v}\PYG{o}{);}
+                \PYG{k}{if} \PYG{o}{(}\PYG{n}{v} \PYG{o}{==} \PYG{n}{u}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                    \PYG{k}{break}\PYG{o}{;}
+                \PYG{o}{\PYGZcb{}}
+            \PYG{o}{\PYGZcb{}}
+            \PYG{n}{res}\PYG{o}{.}\PYG{n+na}{add}\PYG{o}{(}\PYG{n}{tmp}\PYG{o}{);}
+        \PYG{o}{\PYGZcb{}}
+    \PYG{o}{\PYGZcb{}}
+
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

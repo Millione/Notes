@@ -1,0 +1,55 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/*****************递归*****************/}
+
+\PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{inOrder}\PYG{o}{(}\PYG{n}{TreeNode} \PYG{n}{root}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{k}{if} \PYG{o}{(}\PYG{n}{root} \PYG{o}{!=} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{n}{inOrder}\PYG{o}{(}\PYG{n}{root}\PYG{o}{.}\PYG{n+na}{left}\PYG{o}{);}
+        \PYG{c+c1}{// write your code here}
+        \PYG{n}{inOrder}\PYG{o}{(}\PYG{n}{root}\PYG{o}{.}\PYG{n+na}{right}\PYG{o}{);}
+    \PYG{o}{\PYGZcb{}}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{c+cm}{/****************非递归****************/}
+
+\PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{inOrder}\PYG{o}{(}\PYG{n}{TreeNode} \PYG{n}{root}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{k}{if} \PYG{o}{(}\PYG{n}{root} \PYG{o}{==} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{return}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+    \PYG{n}{Deque}\PYG{o}{\PYGZlt{}}\PYG{n}{TreeNode}\PYG{o}{\PYGZgt{}} \PYG{n}{stack} \PYG{o}{=} \PYG{k}{new} \PYG{n}{ArrayDeque}\PYG{o}{\PYGZlt{}\PYGZgt{}();}
+    \PYG{n}{TreeNode} \PYG{n}{p} \PYG{o}{=} \PYG{n}{root}\PYG{o}{;}
+    \PYG{k}{while} \PYG{o}{(}\PYG{n}{p} \PYG{o}{!=} \PYG{k+kc}{null} \PYG{o}{||} \PYG{o}{!}\PYG{n}{stack}\PYG{o}{.}\PYG{n+na}{isEmpty}\PYG{o}{())} \PYG{o}{\PYGZob{}}
+        \PYG{k}{while} \PYG{o}{(}\PYG{n}{p} \PYG{o}{!=} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{n}{stack}\PYG{o}{.}\PYG{n+na}{push}\PYG{o}{(}\PYG{n}{p}\PYG{o}{);}
+            \PYG{n}{p} \PYG{o}{=} \PYG{n}{p}\PYG{o}{.}\PYG{n+na}{left}\PYG{o}{;}
+        \PYG{o}{\PYGZcb{}}
+        \PYG{n}{p} \PYG{o}{=} \PYG{n}{stack}\PYG{o}{.}\PYG{n+na}{pop}\PYG{o}{();}
+        \PYG{c+c1}{// write your code here}
+        \PYG{n}{p} \PYG{o}{=} \PYG{n}{p}\PYG{o}{.}\PYG{n+na}{right}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+\PYG{o}{\PYGZcb{}}
+
+\PYG{c+cm}{/****************Morris****************/}
+
+\PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{inOrder}\PYG{o}{(}\PYG{n}{TreeNode} \PYG{n}{root}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+    \PYG{n}{TreeNode} \PYG{n}{cur} \PYG{o}{=} \PYG{n}{root}\PYG{o}{,} \PYG{n}{pre} \PYG{o}{=} \PYG{k+kc}{null}\PYG{o}{;}
+    \PYG{k}{for} \PYG{o}{(;} \PYG{n}{cur} \PYG{o}{!=} \PYG{k+kc}{null}\PYG{o}{;)} \PYG{o}{\PYGZob{}}
+        \PYG{k}{if} \PYG{o}{(}\PYG{n}{cur}\PYG{o}{.}\PYG{n+na}{left} \PYG{o}{!=} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{n}{pre} \PYG{o}{=} \PYG{n}{cur}\PYG{o}{.}\PYG{n+na}{left}\PYG{o}{;}
+            \PYG{k}{while} \PYG{o}{(}\PYG{n}{pre}\PYG{o}{.}\PYG{n+na}{right} \PYG{o}{!=} \PYG{k+kc}{null} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{pre}\PYG{o}{.}\PYG{n+na}{right} \PYG{o}{!=} \PYG{n}{cur}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{pre} \PYG{o}{=} \PYG{n}{pre}\PYG{o}{.}\PYG{n+na}{right}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}}
+            \PYG{k}{if} \PYG{o}{(}\PYG{n}{pre}\PYG{o}{.}\PYG{n+na}{right} \PYG{o}{==} \PYG{k+kc}{null}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{pre}\PYG{o}{.}\PYG{n+na}{right} \PYG{o}{=} \PYG{n}{cur}\PYG{o}{;}
+                \PYG{n}{cur} \PYG{o}{=} \PYG{n}{cur}\PYG{o}{.}\PYG{n+na}{left}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}} \PYG{k}{else} \PYG{o}{\PYGZob{}}
+                \PYG{c+c1}{// write your code here}
+                \PYG{n}{pre}\PYG{o}{.}\PYG{n+na}{right} \PYG{o}{=} \PYG{k+kc}{null}\PYG{o}{;}
+                \PYG{n}{cur} \PYG{o}{=} \PYG{n}{cur}\PYG{o}{.}\PYG{n+na}{right}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{o}{\PYGZcb{}} \PYG{k}{else} \PYG{o}{\PYGZob{}}
+            \PYG{c+c1}{// write your code here}
+            \PYG{n}{cur} \PYG{o}{=} \PYG{n}{cur}\PYG{o}{.}\PYG{n+na}{right}\PYG{o}{;}
+        \PYG{o}{\PYGZcb{}}
+    \PYG{o}{\PYGZcb{}}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}
